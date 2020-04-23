@@ -8,4 +8,4 @@ install:
   - npm install
   - npm run prepare-public
 after_success:
-  - firebase deploy --project moramia --token $FIREBASE_TOKEN
+  - firebase deploy --token $FIREBASE_TOKEN
