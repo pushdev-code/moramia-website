@@ -46,6 +46,9 @@ build/Release
 # Dependency directories
 node_modules/
 
+# VisualStudio Code folder
+.vscode/
+
 # Optional npm cache directory
 .npm
 
