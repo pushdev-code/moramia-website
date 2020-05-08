@@ -1,26 +1,49 @@
-const path = require('path');
+const HtmlPlugin = require('html-webpack-plugin');
+const CssPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
-  entry: './src/index.js',
-  output: {
-    filename: 'main.js',
-    path: path.resolve(__dirname, 'public'),
-  },
-  module: {
-    rules: [{
-        test: /\.m?js$/,
-        exclude: /(node_modules)/,
-        use: {
-            loader: 'babel-loader',
-            options: {
-                presets: ['@babel/preset-env'],
-                plugins: [
-                    [
-                        '@babel/plugin-proposal-class-properties'
-                    ]
+    module: {
+        rules: [
+            {
+                test:/\.js$/,
+                exclude: /node_modules/,
+                use: {
+                    loader: 'babel-loader'
+                }
+            },
+            {
+                test: /\.html$/,
+                use: [
+                    {
+                        loader: 'html-loader',
+                        options: { minimize: true }
+                    }
+                ]
+            },
+            {
+                test:/\.(png|svg|jpg|gif)/,
+                use:[
+                    'file-loader'
+                ]
+            },
+            {
+                test: /\.scss$/,
+                use: [
+                    'style-loader',
+                    'css-loader',
+                    'sass-loader'
                 ]
             }
-        }
-    }]
-}
+        ]
+    },
+    plugins: [
+        new HtmlPlugin({
+            template: './src/index.html',
+            filename: './index.html'
+        }),
+        new CssPlugin({
+            filename: '[name].css',
+            chunkFilename: '[id].css'
+        })
+    ]
 };
