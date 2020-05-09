@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Moramia website",
   "scripts": {
-    "build": "webpack & node prepare.js"
+    "build": "webpack && node prepare.js"
   },
   "repository": {
     "type": "git",

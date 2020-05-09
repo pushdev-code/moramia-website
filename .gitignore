@@ -46,6 +46,9 @@ build/Release
 # Dependency directories
 node_modules/
 
+# Dist folder
+dist/
+
 # VisualStudio Code folder
 .vscode/
 

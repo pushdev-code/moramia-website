@@ -1,12 +1,11 @@
 const ncp = require('ncp').ncp; //copy files
 const fs = require('fs'); //list files
 const path = require('path');
-const public_dir = './public';
 const source = './dist';
 const dest = './public';
 
 //if public folder doesn't exist
-if (!fs.existsSync(public_dir)) folderfs.mkdirSync(public_dir);
+if (!fs.existsSync(dest)) folderfs.mkdirSync(dest);
 else {
     fs.readdir(dest, (err, files) => {//list files
         if (err) throw err;
