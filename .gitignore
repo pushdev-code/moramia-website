@@ -49,6 +49,9 @@ node_modules/
 # Dist folder
 dist/
 
+# Public folder
+public/
+
 # VisualStudio Code folder
 .vscode/
 
