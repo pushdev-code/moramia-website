@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "description": "Moramia website",
   "scripts": {
-    "build": "webpack && node prepare.js"
+    "build": "webpack && node prepare.js",
+    "start": "npm run build && http-server public"
   },
   "repository": {
     "type": "git",
@@ -29,6 +30,7 @@
     "file-loader": "^6.0.0",
     "html-loader": "^1.1.0",
     "html-webpack-plugin": "^4.3.0",
+    "http-server": "^0.12.3",
     "mini-css-extract-plugin": "^0.9.0",
     "node-sass": "^4.14.1",
     "sass-loader": "^8.0.2",

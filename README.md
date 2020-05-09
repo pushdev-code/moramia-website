@@ -16,7 +16,7 @@ We have the following dependencies:
 * html-loader, html-webpack-plugin: Bundle the js files.
 * node-sass: Export from scss to css.
 
-## Scripts 
+## Scripts
 
 * Running `npm run build` we will build our project. It will bundle html, js and css files from `src` folder to the `dist` folder. Finally it will prepare the public folder for the deploy.
 
@@ -24,10 +24,7 @@ We have the following dependencies:
 
 If you have tasks to complete, please follow these steps:
 
-1. Create your own branch `git checkout -b feature/dev-yourbranch`
+1. Create your own branch `git checkout -b feature/ticket-title`.
 2. Complete your task.
-3. Run `npm run build` and test your webpage.
+3. Run `npm run start` open `http://127.0.0.1:8080` and test your component's task.
 4. Create the PR.
-
-  
-
