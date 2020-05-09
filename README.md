@@ -26,5 +26,5 @@ If you have tasks to complete, please follow these steps:
 
 1. Create your own branch `git checkout -b feature/ticket-title`.
 2. Complete your task.
-3. Run `npm run start` open `http://127.0.0.1:8080` and test your component's task.
+3. Run `npm start` open `http://127.0.0.1:8080` and test your component's task.
 4. Create the PR.
