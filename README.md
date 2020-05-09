@@ -29,3 +29,7 @@ If you have tasks to complete, please follow these steps:
 3. Run `npm start` open `http://localhost:5000` and test your component's task.
   Note: Use Incognito mode in your browser to see the livereload of your changes.
 4. Create the PR.
+
+## Verify ticket
+
+Once your PR is approved and merged, make sure your changes are available at https://moramia-website.web.app/
