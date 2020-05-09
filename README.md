@@ -26,6 +26,6 @@ If you have tasks to complete, please follow these steps:
 
 1. Create your own branch `git checkout -b feature/ticket-title`.
 2. Complete your task.
-3. Run `npm start` open `http://localhost:8080` and test your component's task.
+3. Run `npm start` open `http://localhost:5000` and test your component's task.
   Note: Use Incognito mode in your browser to see the livereload of your changes.
 4. Create the PR.
