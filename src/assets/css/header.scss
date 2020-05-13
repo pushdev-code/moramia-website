@@ -1,0 +1,53 @@
+$header-background: #fff;
+$principal-color: #0dc6f2;
+$nav-link-color:#131212;
+
+a{
+    font-size: 14px;
+    text-transform: uppercase;
+    position: relative;
+    display: block;
+    line-height: 0.9;
+    color: $nav-link-color;
+    text-decoration: none;
+}
+
+a:hover {
+    //font-size: 14px;
+    //text-transform: uppercase;
+    //position: relative;
+    //display: block;
+    //line-height: 0.9;
+    color: $principal-color;
+    transition: all 500ms ease 0s;
+    //text-decoration: none;
+}
+
+
+
+header {
+  background-color: $header-background;
+  padding: 60px 75px;
+  max-width: 170px;
+}
+
+li {
+  color: $nav-link-color;
+  padding: 20px 0;
+  list-style: none;
+
+}
+
+img {
+    height: auto;
+    max-width: 100%;
+    margin-bottom: 100px;
+}
+
+ul {
+    padding-inline-start: 0;
+}
+
+@media screen and (min-width: 767px){
+
+}
