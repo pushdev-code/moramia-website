@@ -2,56 +2,73 @@ $header-background: #fff;
 $principal-color: #0dc6f2;
 $nav-link-color:#131212;
 
-/*@font-face {
-  font-family: "Mystery Quest";
-  src: url("../fonts/FontAwesome.otf");
-}*/
-
-a{
-    font-size: 14px;
-    text-transform: uppercase;
-    position: relative;
-    display: block;
-    line-height: 0.9;
-    color: $nav-link-color;
-    text-decoration: none;
-}
-
-.mobile{
+.mobile {
   display: none;
-}
-
-a:hover {
-    color: $principal-color;
-    transition: all 500ms ease 0s;
 }
 
 .desktop {
   //font-family: Mystery Quest;
   background-color: $header-background;
-  padding: 60px 75px;
-  max-width: 170px;
-  
-}
-
-li {
-  color: $nav-link-color;
-  padding: 20px 0;
-  list-style: none;
-
+  padding: 50px 50px;
+  max-width: 180px;
 }
 
 .desktop img {
-    height: auto;
-    max-width: 100%;
-    margin-bottom: 100px;
+  height: auto;
+  max-width: 100%;
+  margin-bottom: 100px;
 }
 
-ul {
-    padding-inline-start: 0;
+.desktop nav ul {
+  padding-inline-start: 0;
+}
+
+.desktop nav ul li {
+  color: $nav-link-color;
+  list-style: none;
+}
+
+.desktop nav ul li a {
+  font-family: 'FontHelvetica';
+  font-size: 14px;
+  text-transform: uppercase;
+  position: relative;
+  display: block;
+  line-height: 0.9;
+  color: $nav-link-color;
+  text-decoration: none;
+  padding: 20px 0;
+}
+
+.desktop nav ul li a::after{
+  -webkit-transition-duration: 500ms;
+  transition-duration: 500ms;
+  width: 30px;
+  height: 3px;
+  position: absolute;
+  top: 50%;
+  margin-top: -1.5px;
+  left: -150px;
+  background-color: #0dc6f2;
+  content: '';
+}
+
+
+.desktop nav ul li a:hover {
+  color: $principal-color;
+  transition: all 500ms ease 0s;
+}
+
+.desktop nav ul li a:hover::after{
+  left: -50px;
+}
+
+.desktop nav ul {
+  margin:0;
 }
 
 @media screen and (max-width: 767px){
+  
   .desktop {
     display: none;
     position: relative;
