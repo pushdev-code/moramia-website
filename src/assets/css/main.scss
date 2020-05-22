@@ -1,10 +1,16 @@
-$font-color: blue;
+@import './fonts';
+@import './variables';
+@import './footer';
+
+//$font-color: blue;
 
 h1 {
-  color:$font-color;
+  //@mixin name {
+    
+  //$font-color;
   font-size: 45px;
 }
 
 p{
-  color:$font-color;
+  //color:$font-color;
 }
