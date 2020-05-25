@@ -7,11 +7,19 @@ var header = document.querySelector('.desktop');
 
 console.log(new Product('almond',4150));
 
-hamburgerMenu.addEventListener('click',()=>{
-    header.style.left = "0px";
+hamburgerMenu.addEventListener('click', ()=>{
+    if(header.classList.value.toString() === 'desktop desktop-open'){
+        header.classList.remove('desktop-open');
+        header.classList.add('desktop-close');
+    }
+    else {
+        header.classList.add('desktop-open');
+        header.classList.remove('desktop-close');
+    }
 });
 
-close.addEventListener('click',()=>{
-    //header.style.left = "-320px";
+close.addEventListener('click', ()=>{
+    header.classList.remove('desktop-open');
+    header.classList.add('desktop-close');
 });
 

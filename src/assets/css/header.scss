@@ -2,9 +2,28 @@ $header-background: #fff;
 $principal-color: #0dc6f2;
 $nav-link-color:#131212;
 
-
 .mobile {
   display: none;
+}
+
+.fa {
+  font: normal normal normal 18px/1 FontAwesome;
+}
+
+.fa-pinterest:before {
+  content: "\f0d2";
+}
+
+.fa-instagram:before {
+  content: "\f16d";
+}
+
+.fa-facebook:before {
+  content: "\f09a";
+}
+
+.fa-twitter:before {
+  content: "\f099";
 }
 
 .desktop {
@@ -14,6 +33,8 @@ $nav-link-color:#131212;
   max-width: 170px;
   top:0;
   left: 0;
+  -webkit-transition-duration: 500ms;
+  transition-duration: 500ms;
 }
 
 .desktop img {
@@ -46,7 +67,7 @@ $nav-link-color:#131212;
 }
 
 .desktop nav ul li a::after{
-  background-color: #0dc6f2;
+  background-color: $principal-color;
   content: '';
   height: 3px;
   left: -150px;
@@ -73,9 +94,24 @@ $nav-link-color:#131212;
   -webkit-transition-duration: 0ms;
 }
 
-.social{
+.social {
   justify-content: space-between;
   display: flex;
+}
+
+a {
+  color: $nav-link-color;
+  display: inline-block;
+  -webkit-transition: all 500ms ease 0s;
+  transition: all 500ms ease 0s;
+  text-decoration: none;
+  outline: 0 solid transparent;
+  font-weight: 400;
+}
+
+a:hover {
+  color: $principal-color;
+  transition: all 500ms ease 0s;
 }
 
 @media only screen and (max-width: 1023px) and (min-width: 768px){
@@ -100,14 +136,24 @@ $nav-link-color:#131212;
 
 @media screen and (max-width: 767px) and (min-width: 320px){
   
-  .desktop {
+  .desktop-close {
     left: -320px;
     height: -webkit-fill-available;
     display: block;
     position: fixed;
     overflow-y: scroll;
     -webkit-transition-duration: 500ms;
-  transition-duration: 500ms;
+    transition-duration: 500ms;
+  }
+
+  .desktop-open {
+    left: 0px;
+    height: -webkit-fill-available;
+    display: block;
+    position: fixed;
+    overflow-y: scroll;
+    -webkit-transition-duration: 500ms;
+    transition-duration: 500ms;
   }
 
   .mobile {
@@ -152,5 +198,13 @@ $nav-link-color:#131212;
   .desktop .close:hover {
     background-color: $nav-link-color;
     transition: all 500ms ease 0s;
+  }
+
+  .fa-close:before {
+    content: "\f00d";
+  }
+
+  .menu {
+    cursor: pointer;
   }
 }
