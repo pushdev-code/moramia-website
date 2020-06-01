@@ -1,4 +1,2 @@
-import {Product} from './modules/product.js';
-import './assets/css/main.scss'
-
-console.log(new Product('almond',4150));
+import './css/footer.scss';
+import './css/header.scss';
