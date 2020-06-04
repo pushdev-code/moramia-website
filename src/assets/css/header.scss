@@ -1,32 +1,10 @@
 $header-background: #fff;
 $principal-color: #0dc6f2;
 $nav-link-color:#131212;
+$font-helvetica: 'FontHelvetica';
+$hidden-bar: -75px;
 
-.mobile {
-  display: none;
-}
-
-.fa {
-  font: normal normal normal 18px/1 FontAwesome;
-}
-
-.fa-pinterest:before {
-  content: "\f0d2";
-}
-
-.fa-instagram:before {
-  content: "\f16d";
-}
-
-.fa-facebook:before {
-  content: "\f09a";
-}
-
-.fa-twitter:before {
-  content: "\f099";
-}
-
-.desktop {
+.mor-desktop {
   background-color: $header-background;
   padding: 60px 75px;
   position: relative;
@@ -35,88 +13,61 @@ $nav-link-color:#131212;
   left: 0;
   -webkit-transition-duration: 500ms;
   transition-duration: 500ms;
-}
 
-.desktop img {
-  height: auto;
-  margin-bottom: 100px;
-  max-width: 100%;
-}
+  img {
+    height: auto;
+    margin-bottom: 100px;
+    max-width: 100%;
+  }
 
-.desktop nav ul {
-  margin:0;
-  margin-bottom: 100px;
-  padding-inline-start: 0;
-}
+  nav {
+    ul {
+      margin:0;
+      margin-bottom: 100px;
+      padding-inline-start: 0;
+    }
+  }
+  .social {
+    justify-content: space-between;
+    display: flex;
 
-.desktop nav ul li {
-  color: $nav-link-color;
-  list-style: none;
-}
+    a {
+      color: $nav-link-color;
+      display: inline-block;
+      -webkit-transition: all 500ms ease 0s;
+      transition: all 500ms ease 0s;
+      text-decoration: none;
+      outline: 0 solid transparent;
+      font-weight: 400;
+    
+      &:hover {
+        color: $principal-color;
+        transition: all 500ms ease 0s;
+      }
 
-.desktop nav ul li a {
-  color: $nav-link-color;
-  display: block;
-  font-family: 'FontHelvetica';
-  font-size: 14px;
-  line-height: 0.9;
-  padding: 20px 0;
-  position: relative;
-  text-decoration: none;
-  text-transform: uppercase;
-}
+      .fa {
+        font: normal normal normal 18px/1 FontAwesome;
+      }
 
-.desktop nav ul li a::after{
-  background-color: $principal-color;
-  content: '';
-  height: 3px;
-  left: -150px;
-  margin-top: -1.5px;
-  position: absolute;
-  top: 50%;
-  transition-duration: 500ms;
-  -webkit-transition-duration: 500ms;
-  width: 30px;
-}
+      .fa-pinterest:before {
+        content: "\f0d2";
+      }
+      
+      .fa-instagram:before {
+        content: "\f16d";
+      }
+      
+      .fa-facebook:before {
+        content: "\f09a";
+      }
+      
+      .fa-twitter:before {
+        content: "\f099";
+      }
+    } 
+  }
 
-.desktop nav ul li a:hover {
-  color: $principal-color;
-  transition: all 500ms ease 0s;
-}
-
-.desktop nav ul li a:hover::after{
-  left: -75px;
-}
-
-.desktop nav .active a::after {
-  left: -75px;
-  transition-duration: 0ms;
-  -webkit-transition-duration: 0ms;
-}
-
-.social {
-  justify-content: space-between;
-  display: flex;
-}
-
-a {
-  color: $nav-link-color;
-  display: inline-block;
-  -webkit-transition: all 500ms ease 0s;
-  transition: all 500ms ease 0s;
-  text-decoration: none;
-  outline: 0 solid transparent;
-  font-weight: 400;
-}
-
-a:hover {
-  color: $principal-color;
-  transition: all 500ms ease 0s;
-}
-
-@media only screen and (max-width: 1023px) and (min-width: 768px){
-
-  .desktop {
+  @media only screen and (max-width: 1023px) and (min-width: 768px){
     max-width: 180px;
     padding: 50px 50px;
     left: 0;
@@ -124,20 +75,43 @@ a:hover {
     transition-duration: 500ms;
   }
 
-  .desktop nav .active a::after {
-    left: -50px;
-  }
+  @media screen and (max-width: 767px) and (min-width: 320px){
+    .close {
+      background-color: $principal-color;
+      color:$header-background;
+      cursor: pointer;
+      font-size: 12px;
+      height: 40px;
+      line-height: 40px;
+      position: absolute;
+      right: 15px;
+      text-align: center;
+      top: 0;
+      transition-duration: 500ms;
+      width: 40px;
+      -webkit-transition-duration: 500ms;
 
-  .desktop nav ul li a:hover::after{
-    left: -50px;
-  }
+      &:hover {
+        background-color: $nav-link-color;
+        transition: all 500ms ease 0s;
+      }
 
+      .fa {
+        font: normal normal normal 18px/1 FontAwesome;
+      }
+
+      .fa-close:before {
+        content: "\f00d";
+      }
+
+    }
+  }
 }
 
-@media screen and (max-width: 767px) and (min-width: 320px){
-  
-  .desktop-close {
+.desktop-close {
+  @media screen and (max-width: 767px) and (min-width: 320px){
     left: -320px;
+    height: fill-available;
     height: -webkit-fill-available;
     display: block;
     position: fixed;
@@ -145,8 +119,10 @@ a:hover {
     -webkit-transition-duration: 500ms;
     transition-duration: 500ms;
   }
+}
 
-  .desktop-open {
+.desktop-open {
+  @media screen and (max-width: 767px) and (min-width: 320px){
     left: 0px;
     height: -webkit-fill-available;
     display: block;
@@ -155,56 +131,91 @@ a:hover {
     -webkit-transition-duration: 500ms;
     transition-duration: 500ms;
   }
+}
 
-  .mobile {
+.mor-desktop nav ul li {
+  color: $nav-link-color;
+  list-style: none;
+
+  a {
+    color: $nav-link-color;
+    display: block;
+    font-family: $font-helvetica;
+    font-size: 14px;
+    line-height: 0.9;
+    padding: 20px 0;
+    position: relative;
+    text-decoration: none;
+    text-transform: uppercase;
+
+    &::after {
+      background-color: $principal-color;
+      content: '';
+      height: 3px;
+      left: -150px;
+      margin-top: -1.5px;
+      position: absolute;
+      top: 50%;
+      transition-duration: 500ms;
+      -webkit-transition-duration: 500ms;
+      width: 30px;
+    }
+
+    &:hover {
+      color: $principal-color;
+      transition: all 500ms ease 0s;
+    }
+
+    &:hover::after{
+      left: $hidden-bar;
+  
+      @media only screen and (max-width: 1023px) and (min-width: 768px){
+        left: -50px;
+      }
+    }
+  }
+}
+
+.mor-desktop nav ul .active {
+  a::after {
+    left: $hidden-bar;
+    transition-duration: 0ms;
+    -webkit-transition-duration: 0ms;
+
+    @media only screen and (max-width: 1023px) and (min-width: 768px){
+      left: -50px;
+    }
+  }
+}
+
+.mor-mobile {
+  display: none;
+
+  @media screen and (max-width: 767px) and (min-width: 320px){
     align-items: center;
     display: flex;
     height: 70px;
     justify-content: space-between;
     padding: 0.5em 2em;
     width: auto;
-  }
 
-  .mobile img {
-    height: 100%;
-    width: auto;
-  }
+    img {
+      height: 100%;
+      width: auto;
+    }
 
-  .mobile span {
-    background-color: $principal-color;
-    border-radius: 2px;
-    display: flex;
-    height: 3px;
-    margin-bottom: 5px;
-    width: 28px;
-  } 
-  
-  .desktop .close{
-    background-color: $principal-color;
-    color:$header-background;
-    cursor: pointer;
-    font-size: 12px;
-    height: 40px;
-    line-height: 40px;
-    position: absolute;
-    right: 15px;
-    text-align: center;
-    top: 0;
-    transition-duration: 500ms;
-    width: 40px;
-    -webkit-transition-duration: 500ms;
-  }
-  
-  .desktop .close:hover {
-    background-color: $nav-link-color;
-    transition: all 500ms ease 0s;
-  }
+    span {
+      background-color: $principal-color;
+      border-radius: 2px;
+      display: flex;
+      height: 3px;
+      margin-bottom: 5px;
+      width: 28px;
+    }
 
-  .fa-close:before {
-    content: "\f00d";
-  }
-
-  .menu {
-    cursor: pointer;
+    .menu {
+      cursor: pointer;
+    }
   }
 }
+
