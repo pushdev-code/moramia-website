@@ -1,10 +1,8 @@
-$font-color: blue;
+@import './fonts.scss';
+@import './variables.scss';
+@import './homepage.scss';
 
-h1 {
-  color:$font-color;
-  font-size: 45px;
-}
-
-p{
-  color:$font-color;
+body {
+    margin: 0;
+    padding: 0;
 }
