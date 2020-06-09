@@ -7,10 +7,10 @@ const dest = './public';
 //if public folder doesn't exist
 if (!fs.existsSync(dest)) fs.mkdirSync(dest);
 else {
-    fs.readdir(dest, (err, files) => {//list files
+    fs.readdir(dest, (err, files) => { //list files
         if (err) throw err;
-        for (const file of files) {//loop through the files
-          fs.unlink(path.join(dest, file), err => {//remove files
+        for (const file of files) { //loop through the files
+          fs.unlink(path.join(dest, file), err => { //remove files
             if (err) throw err;
           });
         }
