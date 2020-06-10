@@ -3,3 +3,23 @@ $instagram-icon: '\f16d';
 $facebook-icon: '\f09a';
 $twitter-icon: '\f099';
 $close-icon: '\f00d';
+
+.fa {
+    font: normal normal normal 18px/1 FontAwesome;
+}
+
+.fa-pinterest:before {
+    content: $pinterest-icon;
+}
+  
+.fa-instagram:before {
+    content: $instagram-icon;
+}
+  
+.fa-facebook:before {
+    content: $facebook-icon;
+}
+  
+.fa-twitter:before {
+    content: $twitter-icon;
+}

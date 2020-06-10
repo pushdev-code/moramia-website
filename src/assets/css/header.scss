@@ -2,16 +2,16 @@ $header-background: #fff;
 $principal-color: #0dc6f2;
 $nav-link-color:#131212;
 $font-helvetica: 'FontHelvetica';
-$hidden-bar: -75px;
+$desktop-hidden-bar: -75px;
+$tablet-hidden-bar: -50px;
 
-.mor-desktop {
+.mor-links-container {
   background-color: $header-background;
   padding: 60px 75px;
   position: relative;
   max-width: 170px;
   top:0;
   left: 0;
-  -webkit-transition-duration: 500ms;
   transition-duration: 500ms;
 
   img {
@@ -27,6 +27,7 @@ $hidden-bar: -75px;
       padding-inline-start: 0;
     }
   }
+
   .social {
     justify-content: space-between;
     display: flex;
@@ -44,26 +45,6 @@ $hidden-bar: -75px;
         color: $principal-color;
         transition: all 500ms ease 0s;
       }
-
-      .fa {
-        font: normal normal normal 18px/1 FontAwesome;
-      }
-
-      .fa-pinterest:before {
-        content: "\f0d2";
-      }
-      
-      .fa-instagram:before {
-        content: "\f16d";
-      }
-      
-      .fa-facebook:before {
-        content: "\f09a";
-      }
-      
-      .fa-twitter:before {
-        content: "\f099";
-      }
     } 
   }
 
@@ -71,12 +52,12 @@ $hidden-bar: -75px;
     max-width: 180px;
     padding: 50px 50px;
     left: 0;
-    -webkit-transition-duration: 500ms;
     transition-duration: 500ms;
   }
 
   @media screen and (max-width: 767px) and (min-width: 320px){
-    .close {
+
+    .button-close {
       background-color: $principal-color;
       color:$header-background;
       cursor: pointer;
@@ -89,26 +70,20 @@ $hidden-bar: -75px;
       top: 0;
       transition-duration: 500ms;
       width: 40px;
-      -webkit-transition-duration: 500ms;
-
+  
       &:hover {
         background-color: $nav-link-color;
         transition: all 500ms ease 0s;
       }
-
-      .fa {
-        font: normal normal normal 18px/1 FontAwesome;
-      }
-
+  
       .fa-close:before {
         content: "\f00d";
       }
-
     }
   }
 }
 
-.desktop-close {
+.close {
   @media screen and (max-width: 767px) and (min-width: 320px){
     left: -320px;
     height: fill-available;
@@ -116,28 +91,26 @@ $hidden-bar: -75px;
     display: block;
     position: fixed;
     overflow-y: scroll;
-    -webkit-transition-duration: 500ms;
     transition-duration: 500ms;
   }
 }
 
-.desktop-open {
+.open {
   @media screen and (max-width: 767px) and (min-width: 320px){
     left: 0px;
     height: -webkit-fill-available;
     display: block;
     position: fixed;
     overflow-y: scroll;
-    -webkit-transition-duration: 500ms;
     transition-duration: 500ms;
   }
 }
 
-.mor-desktop nav ul li {
+.mor-header-list {
   color: $nav-link-color;
   list-style: none;
 
-  a {
+  .link {
     color: $nav-link-color;
     display: block;
     font-family: $font-helvetica;
@@ -157,7 +130,6 @@ $hidden-bar: -75px;
       position: absolute;
       top: 50%;
       transition-duration: 500ms;
-      -webkit-transition-duration: 500ms;
       width: 30px;
     }
 
@@ -167,28 +139,27 @@ $hidden-bar: -75px;
     }
 
     &:hover::after{
-      left: $hidden-bar;
+      left: $desktop-hidden-bar;
   
       @media only screen and (max-width: 1023px) and (min-width: 768px){
-        left: -50px;
+        left: $tablet-hidden-bar;
       }
     }
   }
 }
 
-.mor-desktop nav ul .active {
-  a::after {
-    left: $hidden-bar;
+.active {
+  .link::after {
+    left: $desktop-hidden-bar;
     transition-duration: 0ms;
-    -webkit-transition-duration: 0ms;
 
     @media only screen and (max-width: 1023px) and (min-width: 768px){
-      left: -50px;
+      left: $tablet-hidden-bar;
     }
   }
 }
 
-.mor-mobile {
+.mor-menu-container {
   display: none;
 
   @media screen and (max-width: 767px) and (min-width: 320px){
