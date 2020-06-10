@@ -47,13 +47,13 @@ build/Release
 node_modules/
 
 # Dist folder
-dist/
+dist/*
 
 # Public folder
-public/
+public/*
 
 # VisualStudio Code folder
-.vscode/
+vscode/
 
 # Optional npm cache directory
 .npm

@@ -1,4 +1,9 @@
-@import './fonts';
-@import './variables';
-@import './footer';
+@import './fonts.scss';
+@import './variables.scss';
+@import './homepage.scss';
+@import './footer.scss';
 
+body {
+    margin: 0;
+    padding: 0;
+}
