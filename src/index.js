@@ -1,8 +1,8 @@
 import {Product} from './modules/product.js';
 import './assets/css/main.scss'
 
-const hamburgerMenu = document.querySelector('.mor-menu-container');
-const close = document.querySelector('.close');
+const hamburgerMenu = document.querySelector('.burger-menu');
+const close = document.querySelector('.button-close');
 var header = document.querySelector('.mor-links-container');
 
 console.log(new Product('almond',4150));
