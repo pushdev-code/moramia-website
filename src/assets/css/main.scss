@@ -1,19 +1,10 @@
-@import './fonts';
-@import './header';
-@import './icons';
+@import './fonts.scss';
+@import './variables.scss';
+@import './homepage.scss';
+@import './header.scss';
+@import './icons.scss';
 
-$font-color: blue;
-
-h1 {
-  color:$font-color;
-  font-size: 45px;
-}
-
-p{
-  color:$font-color;
-}
-
-body{
-  margin: 0;
-  padding: 0;
+body {
+    margin: 0;
+    padding: 0;
 }
