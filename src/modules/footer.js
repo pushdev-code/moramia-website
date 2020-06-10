@@ -1,9 +1,10 @@
-const footerList = document.querySelector(".footer-ulist");
-const footerLinks = footerList.querySelectorAll("a");
-for (let i = 0; i < footerLinks.length; i++) {
-  footerLinks[i].addEventListener("click", () => {
-    let current = footerList.querySelector(".active");
-    current.className = "footer-a";
-    footerLinks[i].className = "active";
+const ACTIVE_CLASS = "active";
+const footerLinks = document.querySelectorAll(".footer-wrapper-ulist .footer-a");
+for (const footerLink of footerLinks) {
+  footerLink.addEventListener("click", (event) => {
+    let active = document.querySelector(".footer-wrapper-ulist .active");
+    active.classList.remove(ACTIVE_CLASS);
+    let current = event.target;
+    current.classList.add(ACTIVE_CLASS);
   });
 }
