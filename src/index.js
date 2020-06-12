@@ -1,5 +1,6 @@
 import {Product} from './modules/product.js';
 import './assets/css/main.scss'
+import './modules/footer'
 
 const hamburgerMenu = document.querySelector('.burger-menu');
 const close = document.querySelector('.button-close');
