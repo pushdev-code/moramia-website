@@ -3,8 +3,6 @@
   padding: 60px 75px;
   position: relative;
   max-width: 170px;
-  top:0;
-  left: 0;
   transition-duration: 500ms;
 
   img {
@@ -26,13 +24,12 @@
     display: flex;
 
     a {
-      color: $content-bgcolor;
+      color: $nav-link-color;
       display: inline-block;
-      -webkit-transition: all 500ms ease 0s;
+      font-weight: 400;
       transition: all 500ms ease 0s;
       text-decoration: none;
       outline: 0 solid transparent;
-      font-weight: 400;
     
       &:hover {
         color: $line-bgcolor;
@@ -65,7 +62,7 @@
       width: 40px;
   
       &:hover {
-        background-color: $content-bgcolor;
+        background-color: $nav-link-color;
         transition: all 500ms ease 0s;
       }
   
@@ -104,7 +101,7 @@
   list-style: none;
 
   .link {
-    color: $content-bgcolor;
+    color: $nav-link-color;
     display: block;
     font-family: $homepage-fontf;
     font-size: 14px;
@@ -131,10 +128,10 @@
       transition: all 500ms ease 0s;
     }
 
-    &:hover::after{
+    &:hover::after {
       left: $desktop-hidden-bar;
   
-      @media only screen and (max-width: 1023px) and (min-width: 768px){
+      @media only screen and (max-width: 1023px) and (min-width: 768px) {
         left: $tablet-hidden-bar;
       }
     }
@@ -161,14 +158,13 @@
     height: 70px;
     justify-content: space-between;
     padding: 0.5em 2em;
-    width: auto;
-
+    
     img {
       height: 100%;
       width: auto;
     }
 
-    span {
+    .line-burger-menu {
       background-color: $line-bgcolor;
       border-radius: 2px;
       display: flex;

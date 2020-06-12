@@ -1,25 +1,17 @@
-$pinterest-icon: '\f0d2';
-$instagram-icon: '\f16d';
-$facebook-icon: '\f09a';
-$twitter-icon: '\f099';
 $close-icon: '\f00d';
+$mor-icons: (
+    pinterest: '\f0d2',
+    instagram: '\f16d',
+    facebook: '\f09a',
+    twitter: '\f099'
+);
 
 .fa {
     font: normal normal normal 18px/1 FontAwesome;
-}
-
-.fa-pinterest:before {
-    content: $pinterest-icon;
-}
-  
-.fa-instagram:before {
-    content: $instagram-icon;
-}
-  
-.fa-facebook:before {
-    content: $facebook-icon;
-}
-  
-.fa-twitter:before {
-    content: $twitter-icon;
+    
+    @each $social, $icon in $mor-icons {
+      &.fa-#{$social}::before {
+        content: $icon;
+      }
+  }
 }
