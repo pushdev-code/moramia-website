@@ -1,9 +1,11 @@
 .mor-links-container {
   background-color: $header-background;
+  box-sizing: border-box;
   padding: 60px 75px;
   position: relative;
-  max-width: 170px;
+  width: 320px;
   transition-duration: 500ms;
+  top: 0;
 
   img {
     height: auto;
@@ -22,6 +24,7 @@
   .social {
     justify-content: space-between;
     display: flex;
+    margin-bottom: 75px;
 
     a {
       color: $nav-link-color;
@@ -39,13 +42,18 @@
   }
 
   @media only screen and (max-width: 1023px) and (min-width: 768px){
-    max-width: 180px;
+    width: 280px;
     padding: 50px 50px;
     left: 0;
     transition-duration: 500ms;
   }
 
   @media screen and (max-width: 767px) and (min-width: 320px){
+
+    bottom: 0;
+    max-width: 320px;
+    position: fixed;
+    z-index: 100;
 
     .button-close {
       background-color: $line-bgcolor;
@@ -154,10 +162,14 @@
 
   @media screen and (max-width: 767px) and (min-width: 320px){
     align-items: center;
+    background-color: $header-background;
     display: flex;
     height: 70px;
     justify-content: space-between;
     padding: 0.5em 2em;
+    position: fixed;
+    width: -moz-available;
+    z-index: 100;
     
     img {
       height: 100%;
