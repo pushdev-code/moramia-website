@@ -1,12 +1,56 @@
-<!-- views/partials/header.ejs -->
-
-<header class="mor-header">
-    <h1>Header</h1>
-    <nav>
-        <ul>
-            <li><a href="">Home</a></li>
-            <li><a href="">Products</a></li>
-            <p class="mor-header__paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde doloremque, iste dolor amet assumenda distinctio, saepe aut enim placeat dolorum magnam qui impedit cumque beatae facere numquam ullam aperiam error?</p>
-        </ul>
-    </nav>
+<header>
+    <div class="mor-menu-container">
+        <img src="/img/logo.png" alt="image" class="mor-logo">
+        <div class="burger-menu">
+            <span class="line-burger-menu"></span>
+            <span class="line-burger-menu"></span>
+            <span class="line-burger-menu"></span>
+        </div>
+    </div>
+    <div class="mor-links-container close">
+        <div class="button-close">
+            <i class="fa fa-close"></i>
+        </div>
+        <img src="/img/logo.png" alt="image" class="mor-logo">
+        <nav>
+            <ul class="pages-navigability">
+                <li class="mor-header-list active">
+                    <a class="link" href="#">home</a>
+                </li>
+                <li class="mor-header-list">
+                    <a class="link" href="#">shop</a>
+                </li>
+                <li class="mor-header-list">
+                    <a class="link" href="#">cart</a>
+                </li>
+                <li class="mor-header-list">
+                    <a class="link" href="#">checkout</a>
+                </li>
+            </ul>
+        </nav>
+        <nav>
+            <ul class="social">
+                <li>
+                    <a href="#">
+                        <i class="fa fa-pinterest"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fa fa-instagram"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fa fa-facebook"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fa fa-twitter"></i>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
 </header>

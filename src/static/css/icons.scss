@@ -1,0 +1,23 @@
+$close-icon: '\f00d';
+$mor-icons: (
+    pinterest: '\f0d2',
+    instagram: '\f16d',
+    facebook: '\f09a',
+    twitter: '\f099'
+);
+
+.fa {
+    font: normal normal normal 18px/1 fontAwesome;
+    
+    @each $social, $icon in $mor-icons {
+      &.fa-#{$social}::before {
+        content: $icon;
+      }
+  }
+}
+
+@media screen and (max-width: #{$breakpoint-tablet - 1}) and (min-width: $breakpoint-mobile){
+  .fa-close:before {
+    content: '\f00d';
+  }
+}

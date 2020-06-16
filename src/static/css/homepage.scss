@@ -2,21 +2,24 @@
 
 .products-wrapper {
     margin: 0;
+    margin-top: 70px;
 
-    @media screen and (min-width: $breakpoint-tablet){
+    @media screen and (min-width: $breakpoint-columns){
         display: grid;
         grid-template-columns: auto auto;
+        grid-auto-rows: min-content;
+        margin-top: 0;
     }
+    
     @media screen and (min-width: $breakpoint-desktop){
         grid-template-columns: auto auto auto;
+        margin-top: 0;
     }
 
     .product {
         display: flex;
         font-family: $font-stack;
         position: relative;
-        width: 100%;
-
         &::after {
             content: '';
             background-color: $product-bgcolor;
@@ -38,6 +41,7 @@
 
         img {
             height: 100%;
+            vertical-align: top;
             width: 100%;
         }
     }
@@ -45,10 +49,10 @@
     .product-content {
         background-color: $content-bgcolor;
         color: $product-fcolor;
-        left: 30px;
+        left: 40px;
         padding: 0 10px;
         position: absolute;
-        top: 30px;
+        top: 40px;
         z-index: 2;
     }
 

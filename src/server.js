@@ -12,8 +12,8 @@ app.use(express.static(__dirname + '/static'));
 // index page 
 app.get('/', function(req, res) {
     res.render('pages/index',{
-        title:'Moramia<3',
-        refreshUrl:process.env.BROWSER_REFRESH_URL
+        title:'Moramia <3',
+        refreshUrl:process.env.BROWSER_REFRESH_URL //browser refresh listening
     });
 });
 
