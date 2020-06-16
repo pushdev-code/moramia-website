@@ -33,3 +33,7 @@ If you have tasks to complete, please follow these steps:
 ## Verify ticket
 
 Once your PR is approved and merged, make sure your changes are available at https://moramia-website.web.app/
+
+### Sources
+
+* [App Engine deploy with GitHub actions](https://baskus.wordpress.com/2019/09/29/how-to-deploy-to-app-engine-using-github-actions/).
