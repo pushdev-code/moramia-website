@@ -2,8 +2,16 @@
 @import './variables.scss';
 @import './homepage.scss';
 @import './footer.scss';
+@import './header.scss';
+@import './icons.scss';
 
 body {
     margin: 0;
     padding: 0;
+}
+
+.main-container {
+    margin: 0;
+    padding: 0;
+    display: flex;
 }

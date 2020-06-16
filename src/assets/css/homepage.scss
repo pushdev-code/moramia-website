@@ -1,5 +1,6 @@
 .products-wrapper {
     margin: 0;
+    height: -moz-available;
 
     @media screen and (min-width: $breakpoint-tablet){
         display: grid;
