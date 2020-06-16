@@ -1,0 +1,76 @@
+@import "./variables.scss";
+
+.products-wrapper {
+    margin: 0;
+
+    @media screen and (min-width: $breakpoint-tablet){
+        display: grid;
+        grid-template-columns: auto auto;
+    }
+    @media screen and (min-width: $breakpoint-desktop){
+        grid-template-columns: auto auto auto;
+    }
+
+    .product {
+        display: flex;
+        font-family: $font-stack;
+        position: relative;
+        width: 100%;
+
+        &::after {
+            content: '';
+            background-color: $product-bgcolor;
+            height: 100%;
+            opacity: 0;
+            position: absolute;
+            transition-duration: 250ms;
+            width: 100%;
+            z-index: 1;
+        }
+
+        &:hover::after {
+            opacity: 1;
+        }
+
+        .figure {
+            margin: 0;
+        }
+
+        img {
+            height: 100%;
+            width: 100%;
+        }
+    }
+
+    .product-content {
+        background-color: $content-bgcolor;
+        color: $product-fcolor;
+        left: 30px;
+        padding: 0 10px;
+        position: absolute;
+        top: 30px;
+        z-index: 2;
+    }
+
+    .product-price {
+        font-size: $price-fsize;
+        line-height: $price-lheight;
+        margin: 0 0 5px 0;
+
+        &::before {
+            background-color: $line-bgcolor;
+            content: '';
+            display: block;
+            height: 3px;
+            margin-bottom: 15px;
+            width: 80px;
+        }
+    }
+    
+    .product-title {
+        font-size: $title-fsize;
+        font-weight: 400;
+        line-height: $title-lheight;
+        margin: 0;
+    }
+}

@@ -13,7 +13,7 @@ We have the following dependencies:
 * @babel/core, @babel/preset-env, babel-loader: The old browsers can understand ourcode.
 * css-loader, sass-loader, style-loader, mini-css-extract-plugin: Bundle the css files.
 * file-loader: Bundle external files (imgs...).
-* html-loader, html-webpack-plugin: Bundle the js files.
+* html-loader, html-webpack-plugin: Bundle the html files.
 * node-sass: Export from scss to css.
 
 ## Scripts
