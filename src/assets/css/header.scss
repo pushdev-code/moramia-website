@@ -3,9 +3,9 @@
     box-sizing: border-box;
     padding: 60px 75px;
     position: relative;
-    width: 320px;
     transition-duration: 500ms;
     top: 0;
+    width: 320px;
   
     img {
       height: auto;
@@ -21,34 +21,14 @@
       }
     }
   
-    .social {
-      justify-content: space-between;
-      display: flex;
-      margin-bottom: 75px;
-  
-      a {
-        color: $nav-link-color;
-        display: inline-block;
-        font-weight: 400;
-        transition: all 500ms ease 0s;
-        text-decoration: none;
-        outline: 0 solid transparent;
-      
-        &:hover {
-          color: $line-bgcolor;
-          transition: all 500ms ease 0s;
-        }
-      } 
-    }
-  
-    @media only screen and (max-width: 1023px) and (min-width: 768px){
+    @media only screen and (max-width: #{$breakpoint-desktop - 1}) and (min-width: $breakpoint-tablet){
       width: 280px;
       padding: 50px 50px;
       left: 0;
       transition-duration: 500ms;
     }
   
-    @media screen and (max-width: 767px) and (min-width: 320px){
+    @media screen and (max-width: #{$breakpoint-tablet - 1}) and (min-width: $breakpoint-mobile){
   
       bottom: 0;
       max-width: 320px;
@@ -73,16 +53,12 @@
           background-color: $nav-link-color;
           transition: all 500ms ease 0s;
         }
-    
-        .fa-close:before {
-          content: "\f00d";
-        }
       }
     }
   }
   
   .close {
-    @media screen and (max-width: 767px) and (min-width: 320px){
+    @media screen and (max-width: #{$breakpoint-tablet - 1}) and (min-width: $breakpoint-mobile){
       left: -320px;
       height: fill-available;
       height: -webkit-fill-available;
@@ -94,9 +70,9 @@
   }
   
   .open {
-    @media screen and (max-width: 767px) and (min-width: 320px){
-      left: 0px;
-      height: -webkit-fill-available;
+    @media screen and (max-width: #{$breakpoint-tablet - 1}) and (min-width: $breakpoint-mobile){
+      left: 0;
+      height: fill-available;
       display: block;
       position: fixed;
       overflow-y: scroll;
@@ -139,11 +115,35 @@
       &:hover::after {
         left: $desktop-hidden-bar;
     
-        @media only screen and (max-width: 1023px) and (min-width: 768px) {
+        @media only screen and (max-width: #{$breakpoint-desktop - 1}) and (min-width: $breakpoint-tablet) {
           left: $tablet-hidden-bar;
         }
       }
     }
+  }
+
+  .social {
+    justify-content: space-between;
+    display: flex;
+    margin-bottom: 75px;
+
+    li {
+
+      list-style: none;
+      a {
+        color: $nav-link-color;
+        display: inline-block;
+        font-weight: 400;
+        transition: all 500ms ease 0s;
+        text-decoration: none;
+        outline: 0 solid transparent;
+      
+        &:hover {
+          color: $line-bgcolor;
+          transition: all 500ms ease 0s;
+        }
+      }
+    } 
   }
   
   .active {
@@ -151,7 +151,7 @@
       left: $desktop-hidden-bar;
       transition-duration: 0ms;
   
-      @media only screen and (max-width: 1023px) and (min-width: 768px){
+      @media only screen and (max-width: #{$breakpoint-desktop - 1}) and (min-width: $breakpoint-tablet){
         left: $tablet-hidden-bar;
       }
     }
@@ -160,7 +160,7 @@
   .mor-menu-container {
     display: none;
   
-    @media screen and (max-width: 767px) and (min-width: 320px){
+    @media screen and (max-width: #{$breakpoint-tablet - 1}) and (min-width: $breakpoint-mobile){
       align-items: center;
       background-color: $header-background;
       display: flex;
