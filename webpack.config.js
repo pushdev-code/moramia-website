@@ -17,15 +17,6 @@ module.exports = {
                     loader: 'babel-loader'
                 }
             }, 
-         /*    {
-                test: /\.html$/,
-                use: [
-                    {
-                        loader: 'html-loader',
-                        options: { minimize: true }
-                    }
-                ]
-            }, */
             {
                 test:/\.(png|svg|jpg|gif)/,
                 use:[
@@ -43,19 +34,9 @@ module.exports = {
         ]
     },
     plugins: [
-/*         new HtmlPlugin({
-            template: './src/index.html',
-            filename: './index.html'
-        }), */
         new CssPlugin({
             filename: '[name].css',
             chunkFilename: '[id].css'
         })
     ],
-  devServer: {
-    contentBase: path.join(__dirname, 'public'),
-    compress: true,
-    port: 5000,
-    overlay: true
-  }
 };

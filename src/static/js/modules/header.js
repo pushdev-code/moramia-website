@@ -1,7 +1,5 @@
 const hamburgerMenu = document.querySelector('.burger-menu');
 const close = document.querySelector('.button-close');
-const logos = document.querySelectorAll('.mor-logo');
-
 var header = document.querySelector('.mor-links-container');
 
 hamburgerMenu.addEventListener('click', () => {
@@ -15,11 +13,6 @@ hamburgerMenu.addEventListener('click', () => {
     }
 });
 
-logos.forEach((logo) => {
-    logo.addEventListener('click', () => {
-        window.location.href = '/';
-    });
-});
 
 close.addEventListener('click', () => {
     header.classList.remove('open');
