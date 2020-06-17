@@ -25,7 +25,7 @@ jobs:
     - run: npm ci
     - uses: actions/gcloud/auth@master
       env:
-        GCLOUD_AUT: ${{ secrets.GCLOUD_AUTH }}
+        GCLOUD_AUTH: ${{ secrets.GCLOUD_AUTH }}
     - uses: actions/gcloud/cli@master
       with:
         args: "app deploy"
