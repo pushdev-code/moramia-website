@@ -6,7 +6,10 @@
 We have the following dependencies:
 
 ### Dependencies
+
 * ncp: Used to copy and paste folders in our project.
+* express & ejs. Serve dynamic website.
+
 
 ### DevDependencies
 * webpack, webpack-cli: Use webpack.
@@ -15,7 +18,6 @@ We have the following dependencies:
 * file-loader: Bundle external files (imgs...).
 * html-loader, html-webpack-plugin: Bundle the html files.
 * node-sass: Export from scss to css.
-* express & ejs. Serve dynamic website.
 * browser-refresh: Watching fiiles for changes.
 
 ## Scripts
