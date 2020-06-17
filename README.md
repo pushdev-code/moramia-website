@@ -7,7 +7,7 @@ We have the following dependencies:
 
 ### Dependencies
 
-* ncp: Used to copy and paste folders in our project.
+* ncp: Used to copy and paste folders in our project. (Available with static website)
 * express & ejs. Serve dynamic website.
 
 
@@ -16,7 +16,7 @@ We have the following dependencies:
 * @babel/core, @babel/preset-env, babel-loader: The old browsers can understand ourcode.
 * css-loader, sass-loader, style-loader, mini-css-extract-plugin: Bundle the css files.
 * file-loader: Bundle external files (imgs...).
-* html-loader, html-webpack-plugin: Bundle the html files.
+* html-loader, html-webpack-plugin: Bundle the html files. (Available with static website)
 * node-sass: Export from scss to css.
 * browser-refresh: Watching fiiles for changes.
 
@@ -40,3 +40,4 @@ Once your PR is approved and merged, make sure your changes are available at htt
 ### Sources
 
 * [App Engine deploy with GitHub actions](https://baskus.wordpress.com/2019/09/29/how-to-deploy-to-app-engine-using-github-actions/).
+* [GCloud GitHub Actions](https://moramia-pushdev.uc.r.appspot.com/).
