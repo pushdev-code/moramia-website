@@ -41,4 +41,4 @@ jobs:
       with:
         project_id: ${{ secrets.GCP_PROJECT_ID }}
         service_account_key: ${{ secrets.GCLOUD_AUTH }}
-    - run: gcloud info
+    - run: app deploy
