@@ -7,7 +7,7 @@ $mor-icons: (
 );
 
 .fa {
-    font: normal normal normal 18px/1 FontAwesome;
+    font: normal normal normal 18px/1 fontAwesome;
     
     @each $social, $icon in $mor-icons {
       &.fa-#{$social}::before {

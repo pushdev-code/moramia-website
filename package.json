@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "description": "Moramia website",
   "scripts": {
-    "build": "webpack && node prepare.js",
-    "start": "npm run build && webpack-dev-server --mode development"
+    "serve": "browser-refresh ./src/server.js",
+    "start": "node ./src/server.js"
   },
   "repository": {
     "type": "git",
@@ -20,16 +20,16 @@
   },
   "homepage": "https://github.com/pushdev-code/moramia-website#readme",
   "dependencies": {
-    "ncp": "^2.0.0"
+    "ejs": "^3.1.2",
+    "express": "^4.17.1"
   },
   "devDependencies": {
     "@babel/core": "^7.9.6",
     "@babel/preset-env": "^7.9.6",
     "babel-loader": "^8.1.0",
+    "browser-refresh": "^1.7.3",
     "css-loader": "^3.5.3",
     "file-loader": "^6.0.0",
-    "html-loader": "^1.1.0",
-    "html-webpack-plugin": "^4.3.0",
     "mini-css-extract-plugin": "^0.9.0",
     "node-sass": "^4.14.1",
     "node-static": "^0.7.11",

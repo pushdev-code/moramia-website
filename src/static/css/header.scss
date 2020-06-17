@@ -87,7 +87,7 @@
     .link {
       color: $nav-link-color;
       display: block;
-      font-family: $homepage-fontf;
+      font-family: $font-stack;
       font-size: 14px;
       line-height: 0.9;
       padding: 20px 0;
@@ -166,11 +166,16 @@
       display: flex;
       height: 70px;
       justify-content: space-between;
-      padding: 0.5em 2em;
+      padding: 0 2em;
       position: fixed;
-      width: -moz-available;
+      width: -moz-available;          /* WebKit-based browsers will ignore this. */
+      width: -webkit-fill-available;  /* Mozilla-based browsers will ignore this. */
       z-index: 100;
       
+      .logo-anchor {
+        height: 100%;
+      }
+
       img {
         height: 100%;
         width: auto;

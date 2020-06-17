@@ -2,8 +2,8 @@ const hamburgerMenu = document.querySelector('.burger-menu');
 const close = document.querySelector('.button-close');
 var header = document.querySelector('.mor-links-container');
 
-hamburgerMenu.addEventListener('click', ()=>{
-    if(header.classList.value.toString() === 'mor-links-container open'){
+hamburgerMenu.addEventListener('click', () => {
+    if (header.classList.value.toString() === 'mor-links-container open') {
         header.classList.remove('open');
         header.classList.add('close');
     }
@@ -13,7 +13,8 @@ hamburgerMenu.addEventListener('click', ()=>{
     }
 });
 
-close.addEventListener('click', ()=>{
+
+close.addEventListener('click', () => {
     header.classList.remove('open');
     header.classList.add('close');
 });
