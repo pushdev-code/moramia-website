@@ -15,10 +15,12 @@ We have the following dependencies:
 * file-loader: Bundle external files (imgs...).
 * html-loader, html-webpack-plugin: Bundle the html files.
 * node-sass: Export from scss to css.
+* express & ejs. Serve dynamic website.
+* browser-refresh: Watching fiiles for changes.
 
 ## Scripts
 
-* Running `npm run build` we will build our project. It will bundle html, js and css files from `src` folder to the `dist` folder. Finally it will prepare the public folder for the deploy.
+* Running `npm run serve` will build our project. 
 
 ## PR
 
@@ -26,8 +28,7 @@ If you have tasks to complete, please follow these steps:
 
 1. Create your own branch `git checkout -b feature/ticket-title`.
 2. Complete your task.
-3. Run `npm start` open `http://localhost:5000` and test your component's task.
-  Note: Use Incognito mode in your browser to see the livereload of your changes.
+3. Run `npm start` open `http://localhost:8080` and test your component's task. Test it with multiple browsers.
 4. Create the PR.
 
 ## Verify ticket
