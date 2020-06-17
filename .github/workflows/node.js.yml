@@ -6,6 +6,8 @@ name: Node.js CI
 on:
   push:
     branches: [ master ]
+  pull_request:
+    branches: [ master ]
 
 jobs:
   build:
@@ -39,4 +41,5 @@ jobs:
       with:
         project_id: ${{ secrets.GCP_PROJECT_ID }}
         service_account_key: ${{ secrets.GCLOUD_AUTH }}
+    - run: gcloud config set project moramia-pushdev
     - run: gcloud app deploy
