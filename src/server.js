@@ -10,21 +10,19 @@ app.set('view engine', 'ejs');
 app.use(express.static(__dirname + '/static'));
 
 // index page 
-app.get('/', function(req, res) {
-    res.render('pages/index',{
-        title:'Moramia <3',
-        refreshUrl:process.env.BROWSER_REFRESH_URL //browser refresh listening
+app.get('/', function (req, res) {
+    res.render('pages/index', {
+        title: 'Moramia <3',
+        refreshUrl: process.env.BROWSER_REFRESH_URL //browser refresh listening
     });
 });
 
-app.listen(8080,() => {
-    if (process.send) {
-        process.send({ event:'online', url:'http://localhost:8080/' });
-    }
+app.listen(8080, () => {
     exec('webpack', (error, stdout, stderr) => {
         if (error !== null) {
             console.log('exec error: ' + error);
-        } 
+        }
+        process.send && process.send({ event: 'online', url: 'http://localhost:8080/' }); // Process is a child process of browser-refresh
         return;
     });
 });
