@@ -14,18 +14,11 @@ app.use(express.static(__dirname + "/static"));
 app.use(bodyParser.json());
 
 //Import Routes
-const productRoute = require("./routes/database.js");
+const productRoute = require("./routes/index.js");
 
 //Middlewares
-app.use("/product", productRoute);
+app.use("/", productRoute);
 
-// index page
-app.get("/", function (req, res) {
-  res.render("pages/index", {
-    title: "Moramia <3",
-    refreshUrl: process.env.BROWSER_REFRESH_URL, //browser refresh listening
-  });
-});
 
 app.listen(8080, () => {
   if (process.send) {
