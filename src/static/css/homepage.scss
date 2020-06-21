@@ -6,7 +6,6 @@
         display: grid;
         grid-template-columns: auto auto;
         grid-auto-rows: min-content;
-        margin-top: 0;
     }
     
     @media screen and (min-width: $breakpoint-desktop){
