@@ -14,10 +14,10 @@ app.use(express.static(__dirname + "/static"));
 app.use(bodyParser.json());
 
 //Import Routes
-const productRoute = require("./routes/index.js");
+const indexRoute = require("./routes/index.js");
 
 //Middlewares
-app.use("/", productRoute);
+app.use("/", indexRoute);
 
 
 app.listen(8080, () => {
