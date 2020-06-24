@@ -39,5 +39,6 @@ jobs:
       with:
         project_id: ${{ secrets.GCP_PROJECT_ID }}
         service_account_key: ${{ secrets.GCLOUD_AUTH }}
+    - run: export GOOGLE_APPLICATION_CREDENTIALS=${{ secrets.GCLOUD_AUTH }}
     - run: gcloud config set project moramia-pushdev
     - run: gcloud app deploy
