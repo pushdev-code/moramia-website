@@ -9,6 +9,8 @@ We have the following dependencies:
 
 * ncp: Used to copy and paste folders in our project. (Available with static website)
 * express & ejs. Serve dynamic website.
+* envdot: enviroment variables.
+* mongoose: database.
 
 
 ### DevDependencies
