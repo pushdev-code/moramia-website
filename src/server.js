@@ -5,6 +5,7 @@ const path = require("path");
 const bodyParser = require("body-parser");
 const exec = require("child_process").exec;
 const mongoose = require("mongoose");
+const GcpSecretsLoader = require("./gcp-secrets");
 require("dotenv/config");
 
 // set the view engine to ejs
@@ -19,10 +20,13 @@ const indexRoute = require("./routes/index.js");
 //Middlewares
 app.use("/", indexRoute);
 
-
+//initializers
 app.listen(8080, () => {
   if (process.send) {
-    process.send({ event: "online", url: "http://localhost:8080/" });
+    process.send({
+      event: "online",
+      url: "http://localhost:8080/",
+    });
   }
   exec("webpack", (error, stdout, stderr) => {
     if (error !== null) {
@@ -32,12 +36,19 @@ app.listen(8080, () => {
   });
 });
 
-//Database connection
-mongoose
-  .connect(process.env.DB_CONNECTION, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-  })
-  .then((db) => console.log("Connected to the db"))
-  .catch((err) => console.error(err));
+async function databaseConecction() {
+    let gcpSecretsLoader = new GcpSecretsLoader();
+    let connection = await gcpSecretsLoader.getSecret("secret_database");
+    //Database connection
+    mongoose
+      .connect(connection, {
+        useNewUrlParser: true,
+        useUnifiedTopology: true,
+      })
+      .then((db) => console.log("Connected to the db"))
+      .catch((err) => console.error(err));
+}
+
+databaseConecction();
+
 console.log("8080 is the magic port");
