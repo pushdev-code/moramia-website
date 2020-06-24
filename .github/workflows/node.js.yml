@@ -39,9 +39,6 @@ jobs:
       with:
         project_id: ${{ secrets.GCP_PROJECT_ID }}
         service_account_key: ${{ secrets.GCLOUD_AUTH }}
-    - name: Setup secrets auth
-      uses: GoogleCloudPlatform/github-actions/get-secretmanager-secrets@master
-      with:
-        credentials: ${{ secrets.GCLOUD_JSON }}
+        export_default_credentials: true
     - run: gcloud config set project moramia-pushdev
     - run: gcloud app deploy
