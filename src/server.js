@@ -17,6 +17,16 @@ app.get('/', function (req, res) {
     });
 });
 
+app.get('/product', function (req, res) {
+    res.render('pages/product', {
+        title: 'Moramia Product <3',
+        nombre:'nombre',
+        descripcion:'descripcion',
+        precio:'precio',
+        refreshUrl: process.env.BROWSER_REFRESH_URL //browser refresh listening
+    });
+});
+
 app.listen(8080, () => {
     exec('webpack', (error, stdout, stderr) => {
         if (error !== null) {
