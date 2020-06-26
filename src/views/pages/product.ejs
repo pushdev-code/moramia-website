@@ -1,0 +1,19 @@
+<!-- views/pages/index.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('../partials/head', {title:title}) %>
+</head>
+<body>
+    <section class="main-container">
+        <%- include('../partials/header') %>
+        <%- include('../partials/product-information',{id:id}, {nombre:nombre},{precio:precio},
+        {imagen:imagen},{imagen2:imagen2},{descripcion:descripcion},{galeria1:galeria1},
+        {galeria2:galeria2},{galeria3:galeria3},{galeria4:galeria4},{peso:peso},{existencia:existencia}
+        ) %>
+    </section>
+    <%- include('../partials/footer') %>
+    <script src="/js/main.js"></script>
+    <script src="<%- refreshUrl %>"> </script>
+</body>
+</html>
