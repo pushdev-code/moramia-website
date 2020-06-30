@@ -18,20 +18,20 @@ router.get('/', async (req,res) => {
 async function product(){
     const prd = await Products.find();
     for(let i = 0; i < prd.length; i++){
-        router.get('/product/'+prd[i].product_name, async(req, res) => {
+        router.get('/product/' + prd[i].product_name, async(req, res) => {
             res.render('pages/product', {
-                title: 'Moramia Product <3',
+                title: 'Moramia ' + prd[i].product_name + ' <3',
                 id: prd[i].productId,
                 nombre: prd[i].product_name,
                 precio: prd[i].product_price,
                 imagen: prd[i].product_image,
                 imagen2: prd[i].product_image2,
                 descripcion: prd[i].product_description,
-                galeria1: prd[i].product_galery.image1,
-                galeria2: prd[i].product_galery.image2,
-                galeria3: prd[i].product_galery.image3,
-                galeria4: prd[i].product_galery.image4,
-                peso: prd[i].product_weigth,
+                galeria1: prd[i].product_gallery.image1,
+                galeria2: prd[i].product_gallery.image2,
+                galeria3: prd[i].product_gallery.image3,
+                galeria4: prd[i].product_gallery.image4,
+                peso: prd[i].product_weight,
                 existencia: prd[i].product_in_stock,
                 refreshUrl: process.env.BROWSER_REFRESH_URL //browser refresh listening
             });
@@ -40,16 +40,4 @@ async function product(){
 }
 
 product();
-
-router.get('/product', async (req, res) => {
-    const prds = await Products.find();
-    res.render('pages/product', {
-        title: 'Moramia Product <3',
-        nombre: prds[2].product_name,
-        descripcion:'descripcion',
-        precio:'precio',
-        refreshUrl: process.env.BROWSER_REFRESH_URL //browser refresh listening
-    });
-});
-
 module.exports = router;
