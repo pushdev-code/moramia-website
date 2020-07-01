@@ -1,6 +1,6 @@
-var active = document.querySelector('.active');
-var pathname = window.location.pathname;
+const active = document.querySelector('.active');
+const pathname = window.location.pathname;
 
-if(pathname.includes('/product')) {
+if(pathname.includes('/product') && active) {
     active.classList.remove('active');
 }
