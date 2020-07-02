@@ -7,7 +7,7 @@ const productSchema = mongoose.Schema({
     product_image : String,
     product_image2 : String,
     product_description : String,
-    product_galery : {
+    product_gallery : {
         image1 : String,
         image2 : String,
         image3 : String,
