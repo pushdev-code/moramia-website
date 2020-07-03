@@ -9,3 +9,12 @@ for (const footerLink of footerLinks) {
     current.classList.add(ACTIVE_CLASS);
   });
 }
+
+function checkClass(str) {
+  const REGEX = /.*\.active.*/;
+  return REGEX.test(str);
+}
+
+module.exports = {
+  checkClass
+}
