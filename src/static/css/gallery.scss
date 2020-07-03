@@ -4,8 +4,8 @@
    width: 100%;
 
    @media screen and (min-width: $breakpoint-desktop) {
-      width: 45%;
       margin: 2rem;
+      width: 45%;
    }
 
    @media screen and (min-width: $breakpoint-tablet) {
@@ -34,7 +34,7 @@
    .item-slide {
       flex-shrink: 0;
       list-style: none;
-      transition: transform 0.8s ease;
+      transition: transform .8s ease;
       width: 100%;
    }
 
@@ -50,10 +50,10 @@
       .gallery-img {
          cursor: pointer;
          height: 100%;
-         margin: auto 0.4rem;
+         margin: auto .4rem;
          min-width: 0;
-         opacity: 0.6;
-         transition: opacity 0.7s ease;
+         opacity: .6;
+         transition: opacity .7s ease;
          width: 100%;
       }
 
