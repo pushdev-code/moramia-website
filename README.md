@@ -49,7 +49,7 @@ If you have tasks to complete, please follow these steps:
 
 ## Verify ticket
 
-Once your PR is approved and merged, make sure your changes are available at https://moramia-website.web.app/
+Once your PR is approved and merged, make sure your changes are available at https://moramia-pushdev.uc.r.appspot.com/
 
 ### Sources
 
