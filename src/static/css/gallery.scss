@@ -40,15 +40,11 @@
 
    .gallery-wrapper-miniture {
       display: flex;
-
-      @media screen and (min-width: $breakpoint-tablet) {
-         max-width: 782px;
-         width: 100%;
-      }
-
+      
       @media screen and (min-width: $breakpoint-tablet) {
          margin-bottom: 3rem;
-         width: 100%;         
+         max-width: 782px;
+         width: 100%;
       }
 
       .gallery-img {
