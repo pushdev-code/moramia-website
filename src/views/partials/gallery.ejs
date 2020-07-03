@@ -1,5 +1,4 @@
 <section class="gallery-wrapper">
-    <%products.forEach( function( prd ){ %>
     <img class="gallery-highlight" src=<%= prd.product_image %> alt="main image">
     <div class="gallery-wrapper-miniture">
         <img class="gallery-img active" src=<%= prd.product_gallery.image1 %>
@@ -11,5 +10,4 @@
         <img class="gallery-img" src=<%= prd.product_gallery.image4 %>
             alt="product image 4" />
     </div>
-    <% }) %>
 </section>

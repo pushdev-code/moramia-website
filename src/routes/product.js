@@ -2,19 +2,17 @@ const express = require('express');
 const router = express.Router();
 const Products = require('../models/Products');
 
-async function product(){
-    const products = await Products.find();
-    for(const product of products){
-    const { product_name } = product;
-        router.get('/' + product_name, async(req, res) => {
-            res.render('pages/product', {
-                title: `Moramia ${product_name}`,
-                product,
-                refreshUrl: process.env.BROWSER_REFRESH_URL //browser refresh listening
-            });
-        });
+router.get('/:name', async (req,res) => {
+    try {
+        const prd = await Products.findOne({product_name : req.params.name});
+       res.render("pages/product", {
+            title: "Moramia <3",
+            prd : prd,
+            refreshUrl: process.env.BROWSER_REFRESH_URL, //browser refresh listening
+          });
+    }catch(err){
+        res.json({message : err});
     }
-} 
+});
 
-product();
 module.exports = router;
