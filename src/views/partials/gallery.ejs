@@ -1,13 +1,22 @@
 <section class="gallery-wrapper">
-    <img class="gallery-highlight" src=<%= prd.product_image %> alt="main image">
+    <ul class="slider">
+        <li class="item-slide active">
+            <img class="gallery-highlight" src=<%= prd.product_image %> alt="main image">
+        </li>
+        <li class="item-slide">
+            <img class="gallery-highlight" src=<%= prd.product_gallery.image2 %> alt="main image 2">
+        </li>
+        <li class="item-slide">
+            <img class="gallery-highlight" src=<%= prd.product_gallery.image3 %> alt="main image 3">
+        </li>
+        <li class="item-slide">
+            <img class="gallery-highlight" src=<%= prd.product_gallery.image4 %> alt="main image 4">
+        </li>
+    </ul>
     <div class="gallery-wrapper-miniture">
-        <img class="gallery-img active" src=<%= prd.product_gallery.image1 %>
-            alt="product image 1" />
-        <img class="gallery-img" src=<%= prd.product_gallery.image2 %>
-            alt="product image 3" />
-        <img class="gallery-img" src=<%= prd.product_gallery.image3 %>
-            alt="product image 2" />
-        <img class="gallery-img" src=<%= prd.product_gallery.image4 %>
-            alt="product image 4" />
+        <img id="0" class="gallery-img active" src=<%= prd.product_gallery.image1 %> alt="product image 1" />
+        <img id="1" class="gallery-img" src=<%= prd.product_gallery.image2 %> alt="product image 3" />
+        <img id="2" class="gallery-img" src=<%= prd.product_gallery.image3 %> alt="product image 2" />
+        <img id="3" class="gallery-img" src=<%= prd.product_gallery.image4 %> alt="product image 4" />
     </div>
 </section>

@@ -1,41 +1,60 @@
 .gallery-wrapper {
    align-items: center;
-   display: flex;
-   flex-direction: column;
-   justify-content: center;
+   margin: 1rem;
    width: 100%;
 
-   @media screen and (min-width: $breakpoint-tablet) {
-      width: 60%;
-   }
    @media screen and (min-width: $breakpoint-desktop) {
-      margin: 3rem 0;   
-      width: 40%;
-         
+      width: 45%;
+      margin: 2rem;
+   }
+
+   @media screen and (min-width: $breakpoint-tablet) {
+      margin: 1.5rem;
    }
 
    .gallery-highlight {
-      width: 90%;
+      width: 100%;
 
       @media screen and (min-width: $breakpoint-tablet) {
+         max-width: 782px;
+      }
+   }
+
+   .slider {
+      display: flex;
+      overflow: hidden;
+      padding: 0;
+
+      @media screen and (min-width: $breakpoint-tablet) {
+         max-width: 782px;
          width: 100%;
       }
+   }
 
+   .item-slide {
+      flex-shrink: 0;
+      list-style: none;
+      transition: transform 0.8s ease;
+      width: 100%;
    }
 
    .gallery-wrapper-miniture {
       display: flex;
-      margin: 0.6em;
-      width: 90%;
 
       @media screen and (min-width: $breakpoint-tablet) {
+         max-width: 782px;
          width: 100%;
+      }
+
+      @media screen and (min-width: $breakpoint-tablet) {
+         margin-bottom: 3rem;
+         width: 100%;         
       }
 
       .gallery-img {
          cursor: pointer;
          height: 100%;
-         margin: auto 0.6em;
+         margin: auto 0.4rem;
          min-width: 0;
          opacity: 0.6;
          transition: opacity 0.7s ease;
