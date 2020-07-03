@@ -14,6 +14,7 @@ We have the following dependencies:
 
 
 ### DevDependencies
+
 * webpack, webpack-cli: Use webpack.
 * @babel/core, @babel/preset-env, babel-loader: The old browsers can understand ourcode.
 * css-loader, sass-loader, style-loader, mini-css-extract-plugin: Bundle the css files.
@@ -21,6 +22,17 @@ We have the following dependencies:
 * html-loader, html-webpack-plugin: Bundle the html files. (Available with static website)
 * node-sass: Export from scss to css.
 * browser-refresh: Watching fiiles for changes.
+
+## Authentication
+
+1. Download the JSON file with the credentials.
+2. Provide authentication setting the `GOOGLE_APPLICATION_CREDENTIALS` with the JSON file:
+
+* **Windows**: `set GOOGLE_APPLICATION_CREDENTIALS=[PATH]`
+* **MacOS and Linux**: `export GOOGLE_APPLICATION_CREDENTIALS="[PATH]"`.
+
+*Replace [PATH] with the file path of the JSON file that contains your service account key.*
+* [Setting Up Authentication GAP](https://cloud.google.com/docs/authentication/production#linux-or-macos)
 
 ## Scripts
 

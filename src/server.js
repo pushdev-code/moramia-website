@@ -16,10 +16,11 @@ app.use(bodyParser.json());
 
 //Import Routes
 const indexRoute = require("./routes/index.js");
-const productRoute = require("./routes/products.js");
+const productRoute = require("./routes/product.js");
+
 //Middlewares
 app.use("/", indexRoute);
-app.use("/products",productRoute);
+app.use("/product", productRoute);
 
 //initializers
 app.listen(8080, () => {
