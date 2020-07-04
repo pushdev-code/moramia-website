@@ -40,7 +40,7 @@
 
    .gallery-wrapper-miniture {
       display: flex;
-      
+
       @media screen and (min-width: $breakpoint-tablet) {
          margin-bottom: 3rem;
          max-width: 782px;
@@ -65,11 +65,8 @@
          margin-right: 0;
       }
 
+      .active,
       .gallery-img:hover {
-         opacity: 1;
-      }
-
-      .active {
          border: 2px solid $moramia-blue;
          opacity: 1;
       }

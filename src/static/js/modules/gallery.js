@@ -15,16 +15,6 @@ function imageGallery() {
             });
 
         });
-        preview.addEventListener("mouseover", function () {
-            const size = carouselSlide[0].clientWidth;
-            let counter = this.id;
-            previews.forEach((p) => p.classList.remove(ACTIVE_CLASS));
-            preview.classList.add(ACTIVE_CLASS);
-            carouselSlide.forEach((cl) => {
-                cl.style.transform = "translateX(" + calculateMovement(size,counter) + "px)";
-            });
-
-        });
     };
 
     //Resets slider
