@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Moramia website",
   "scripts": {
+    "test": "jest --coverage",
     "serve": "browser-refresh ./src/server.js",
     "start": "node ./src/server.js"
   },
@@ -25,6 +26,7 @@
     "ejs": "^3.1.2",
     "envdot": "0.0.3",
     "express": "^4.17.1",
+    "jest": "^26.1.0",
     "mongoose": "^5.9.19"
   },
   "devDependencies": {
