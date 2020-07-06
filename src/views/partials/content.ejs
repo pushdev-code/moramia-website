@@ -1,15 +1,15 @@
 <main class="products-wrapper">
-  <%products.forEach( function( prd ){ %>
-    <article class="product">
-      <figure class="figure">
-        <a href="/product/<%= prd.product_name %>" title = <%= prd.product_name %> target="_self">
-          <img src=<%= prd.product_image %> alt=<%= prd.product_name %> >
-        </a>
-        <figcaption class="product-content">
-          <p class="product-price">From $<%= prd.product_price%></p>
-          <h4 class="product-title"><%= prd.product_name %></h4>
-        </figcaption>
-      </figure>
-    </article>
+  <%products.forEach( function( product ){ %>
+    <a href="/product/<%= product.product_name %>" title = <%= product.product_name %> target="_self">
+      <article class="product">
+        <figure class="figure">
+            <img src=<%= product.product_image %> alt=<%= product.product_name %> >
+          <figcaption class="product-content">
+            <p class="product-price">From $<%= product.product_price%></p>
+            <h4 class="product-title"><%= product.product_name %></h4>
+          </figcaption>
+        </figure>
+      </article>
+    </a>
   <% }) %>
 </main>
