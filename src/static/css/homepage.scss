@@ -18,10 +18,11 @@
         font-family: $font-stack;
         position: relative;
         &::after {
-            content: '';
             background-color: $product-bgcolor;
+            content: '';
             height: 100%;
             opacity: 0;
+            pointer-events: none;
             position: absolute;
             transition-duration: 250ms;
             width: 100%;
