@@ -8,7 +8,7 @@ router.get('/:name', async (req, res) => {
             url_slug: req.params.name.toLowerCase()
         });
         if (!product) return res.status(404).render("pages/error", {
-            title: "Moramia <3",
+            title: "Page not found",
             error: 404,
             refreshUrl: process.env.BROWSER_REFRESH_URL, //browser refresh listening
         });
@@ -20,7 +20,7 @@ router.get('/:name', async (req, res) => {
     } catch (err) {
         console.log(err);
         res.status(500).render("pages/error", {
-            title: "Moramia <3",
+            title: "Internal server error",
             error: 500,
             refreshUrl: process.env.BROWSER_REFRESH_URL, //browser refresh listening
         });

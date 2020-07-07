@@ -1,9 +1,9 @@
 .error-section {
-  margin: auto;
+  margin: 10rem 1rem;
   width: 100%;
 
-  @media screen and (max-width: $breakpoint-tablet) {
-    margin: 10rem 1rem;
+  @media screen and (min-width: $breakpoint-tablet) {
+    margin: auto;
   }
 
   .notfound {
@@ -12,8 +12,8 @@
 
   .notfound-h1 {
     background-clip: text;
-    background: rgb(34, 193, 195);
-    background: linear-gradient(45deg, rgba(34, 193, 195, 1) 35%, rgba(253, 45, 45, 1) 85%);
+    background: $moramia-blue;
+    background: linear-gradient(45deg, $moramia-blue 35%, rgba(253, 45, 45, 1) 65%);
     color: transparent;
     font-family: $font-stack;
     font-size: 15rem;
@@ -29,37 +29,34 @@
 
   .notfound-h2 {
     font-family: $font-stack;
-    font-size: 3rem;
+    font-size: 2.2rem;
     font-weight: 200;
     letter-spacing: .2rem;
     margin-top: 0;
     margin-bottom: 1.8rem;
     text-transform: uppercase;
 
-    @media screen and (max-width: $breakpoint-desktop) {
-      font-size: 2.2rem;
+    @media screen and (min-width: $breakpoint-desktop) {
+      font-size: 3rem;
+      padding: 0 .5rem;
     }
   }
 
   .notfound-p {
     font-family: $font-awesome;
-    font-size: 1.1rem;
+    font-size: 1rem;
     font-weight: 200;
     margin-top: 0;
     margin-bottom: 1.5rem;
+    padding: 0 1rem;
 
-    @media screen and (max-width: $breakpoint-desktop) {
-      font-size: 1rem;
+    @media screen and (min-width: $breakpoint-desktop) {
+      font-size: 1.1rem;
     }
   }
 
-  .notfound-return {
-    color: $moramia-blue;
-    text-decoration: none;
-  }
-
-  .notfound-a {
-    border-bottom: 1px dashed $moramia-blue;
+  .notfound a {
+    border-bottom: 1px none $moramia-blue;
     border-radius: 2px;
     color: $moramia-blue;
     font-family: $font-stack;
@@ -67,7 +64,7 @@
     text-decoration: none;
   }
 
-  .notfound-social {
+  .social li {
     >a {
       border: 1px solid #efefef;
       border-radius: 50%;
@@ -78,7 +75,6 @@
       line-height: 40px;
       margin: 3px;
       transition: 0.2s all;
-      -webkit-transition: 0.2s all;
       width: 40px;
 
       @media screen and (min-width: $breakpoint-tablet) {
@@ -89,7 +85,7 @@
     :hover {
       background-color: $moramia-blue;
       border-color: $moramia-blue;
-      color: #fff;
+      color: $moramia-white;
     }
   }
 }
