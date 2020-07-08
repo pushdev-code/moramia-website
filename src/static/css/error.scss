@@ -64,8 +64,15 @@
     text-decoration: none;
   }
 
-  .social li {
-    >a {
+  .social {
+    justify-content: center;
+    padding: 0;
+    
+    li {
+      padding: .5rem;
+    }
+
+    a {
       border: 1px solid #efefef;
       border-radius: 50%;
       color: $moramia-blue;
@@ -82,7 +89,7 @@
       }
     }
 
-    :hover {
+    a:hover {
       background-color: $moramia-blue;
       border-color: $moramia-blue;
       color: $moramia-white;
