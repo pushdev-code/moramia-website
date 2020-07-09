@@ -19,18 +19,22 @@ function imageGallery() {
 
     //Resets slider
     window.addEventListener('resize', function (event) {
-        let size = carouselSlide[0].clientWidth;
-        let counter = reset.id;
-        previews.forEach((p) => p.classList.remove(ACTIVE_CLASS));
-        reset.classList.add(ACTIVE_CLASS);
-        carouselSlide.forEach((cl) => {
-            cl.style.transform = "translateX(" + calculateMovement(size, counter) + "px)";
-        });
+        try {
+            let size = carouselSlide[0].clientWidth;
+            let counter = reset.id;
+            previews.forEach((p) => p.classList.remove(ACTIVE_CLASS));
+            reset.classList.add(ACTIVE_CLASS);
+            carouselSlide.forEach((cl) => {
+                cl.style.transform = "translateX(" + calculateMovement(size, counter) + "px)";
+            });
+        } catch {
+            return;
+        }
     });
 }
 
 function calculateMovement(size, counter) {
-    return  parseFloat(-size * counter);
+    return parseFloat(-size * counter);
 }
 
 imageGallery();
