@@ -1,5 +1,5 @@
 const hamburgerMenu = document.querySelector('.burger-menu');
-const close = document.querySelector('.button-close');
+const closeBtn = document.querySelector('.button-close');
 var header = document.querySelector('.mor-links-container');
 
 hamburgerMenu.addEventListener('click', () => {
@@ -13,8 +13,7 @@ hamburgerMenu.addEventListener('click', () => {
     }
 });
 
-
-close.addEventListener('click', () => {
+closeBtn.addEventListener('click', () => {
     header.classList.remove('open');
     header.classList.add('close');
 });

@@ -1,4 +1,5 @@
-const {SecretManagerServiceClient} = require("@google-cloud/secret-manager");
+/* eslint-disable no-undef */
+const {SecretManagerServiceClient} = require('@google-cloud/secret-manager');
 class SecretReader {
     async getSecret(secret) {
         try {
@@ -17,4 +18,5 @@ class SecretReader {
     }
 }
 
+// eslint-disable-next-line no-undef
 module.exports = SecretReader;
