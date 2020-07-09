@@ -21,6 +21,14 @@ const productRoute = require("./routes/product.js");
 //Middlewares
 app.use("/", indexRoute);
 app.use("/product", productRoute);
+app.use("*", (req, res) => {
+  res.status(404).render("pages/error", {
+    title: "Page not found",
+    error: 404,
+    refreshUrl: process.env.BROWSER_REFRESH_URL, //browser refresh listening
+  });
+});
+
 
 //initializers
 app.listen(8080, () => {
@@ -39,16 +47,16 @@ app.listen(8080, () => {
 });
 
 async function databaseConecction() {
-    let gcpSecretsLoader = new GcpSecretsLoader();
-    let connection = await gcpSecretsLoader.getSecret("secret_database");
-    //Database connection
-    mongoose
-      .connect(connection, {
-        useNewUrlParser: true,
-        useUnifiedTopology: true,
-      })
-      .then((db) => console.log("Connected to the db"))
-      .catch((err) => console.error(err));
+  let gcpSecretsLoader = new GcpSecretsLoader();
+  let connection = await gcpSecretsLoader.getSecret("secret_database");
+  //Database connection
+  mongoose
+    .connect(connection, {
+      useNewUrlParser: true,
+      useUnifiedTopology: true,
+    })
+    .then((db) => console.log("Connected to the db"))
+    .catch((err) => console.error(err));
 }
 
 databaseConecction();
