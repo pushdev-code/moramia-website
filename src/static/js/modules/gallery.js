@@ -33,4 +33,8 @@ function calculateMovement(size, counter){
     return -size * counter;
 }
 
-imageGallery();
+if(document.querySelector('.gallery-wrapper')){
+    imageGallery();
+    console.log("holo");
+}
+
