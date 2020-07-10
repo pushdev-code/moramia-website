@@ -4,23 +4,25 @@ a {
 
 .card-wrapper {
     font-family: $font-stack;
-    margin: 2.5rem;
+   /* margin: 2.5rem;
     margin-left: 0;
     min-width: 45%;
     width: 100%;
+    margin-bottom: 0;*/
+    margin: 1.3rem;
     @media screen and (max-width: #{$breakpoint-tablet - 1}) and (min-width: $breakpoint-mobile){
         //mobile
-        max-width: 100%;
+        /*max-width: 100%;
         padding-right: 0px;
-        margin-right: 10px;
+        margin-right: 10px;*/
        
     }
 
     @media only screen and (max-width: #{$breakpoint-desktop - 1}) and (min-width: $breakpoint-tablet) {
         //tablet
-        max-width: 100%;
+        /*max-width: 100%;
         padding-right: 0px;
-        margin-right: 10px;
+        margin-right: 10px;*/
     }
 
     .product-price {
@@ -61,7 +63,7 @@ a {
     font-size: 16px;
     color: $description-color;
      // changes
-     margin-top: 0;
+     margin: 0;
     
 }
 
@@ -85,44 +87,24 @@ a {
 
 
 
-.button {
-    width: 310px;
-    height: 80px;
-    line-height: 80px;
+.product-card-btn {
+    
+    width: 100%;
+    height: 5rem;
+    //line-height: 80px;
     color: $moramia-white;
     font-family: $font-stack;
     font-size: 18px;
     background-color: $line-bgcolor;
     font-weight: 400;
-    //changes
-    padding-top: 0;
-    padding-bottom: 0;
-    padding-right: 7px;
-    padding-left: 7px;
     border: 0;
     
     &:hover {
-        font-size: 18px;
-        color: $moramia-white;
         background-color: $background-button;
         cursor: pointer;
     }
 }
 
-.product-information{
-    display: flex;
-    margin-bottom: 100px;
-
-    @media screen and (max-width: #{$breakpoint-tablet - 1}) and (min-width: $breakpoint-mobile){
-        display: block;
-       
-    }
-
-    @media only screen and (max-width: #{$breakpoint-desktop - 1}) and (min-width: $breakpoint-tablet) {
-        //tablet
-        display: block;
-    }
-}
 
 // Single card design
 
@@ -178,13 +160,17 @@ a {
 }
 
 .add-cart{
-    display: block;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .add-btn{
+    align-self: flex-start;
     align-items: center;
     display: flex;
-    margin-bottom: 50px !important;
+    margin: 3rem 0; 
+    //margin-bottom: 50px !important;
 }
 
 .qty{

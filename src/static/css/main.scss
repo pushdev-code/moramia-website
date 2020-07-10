@@ -8,14 +8,9 @@
 @import "./error.scss";
 @import './breadcrumb.scss';
 @import './product-card.scss';
+@import './main-container.scss';
 
 body {
     margin: 0;
     padding: 0;
-}
-
-.main-container {
-    display: flex;
-    margin: 0;
-    padding: 0; 
 }
