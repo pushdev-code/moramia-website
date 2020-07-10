@@ -2,9 +2,9 @@
     <div class="card">
         <div class="product-head">
             <div class="line"></div>
-            <p class="product-price">$180</p>
+            <p class="product-price">$<%= product.product_price %></p>
             <a href="#">
-                <h6 class="product-name">Almendras</h6>
+                <h6 class="product-name"><%= product.product_name %></h6>
             </a>
             <div class="ratings-review">
                 <div class="ratings">
@@ -23,9 +23,7 @@
         </p>
     </div>
     <div class="description-wrapper">
-        <p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid quae eveniet culpa
-            officia quidem mollitia impedit iste asperiores nisi reprehenderit consequatur, autem, nostrum pariatur
-            enim?</p>
+        <p class="description"><%= product.product_description %></p>
     </div>
     <form class="add-cart">
         <div class="add-btn">
