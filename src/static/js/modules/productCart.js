@@ -1,4 +1,3 @@
-function prod (){
 const lessBtn = document.querySelector('.qty-less');
 const moreBtn = document.querySelector('.qty-more');
 const number = document.querySelector('.qty-number');
@@ -14,6 +13,3 @@ moreBtn.addEventListener('click',()=>{
         number.value++;
     }
 });
-}
-
-prod();

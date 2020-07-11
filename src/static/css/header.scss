@@ -111,6 +111,10 @@
         color: $line-bgcolor;
         transition: all 500ms ease 0s;
       }
+
+      &:focus {
+        border: solid 1px $moramia-blue;
+      }
   
       &:hover::after {
         left: $desktop-hidden-bar;
@@ -141,6 +145,9 @@
         &:hover {
           color: $line-bgcolor;
           transition: all 500ms ease 0s;
+        }
+        &:focus {
+          border : 1px solid $moramia-blue;
         }
       }
     } 

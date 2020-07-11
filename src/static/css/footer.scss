@@ -189,6 +189,10 @@
         color: $moramia-blue;
         transition: all 0.4s ease;
       }
+
+      &:focus {
+        border: solid 2px $moramia-blue;
+      }
     }
 
     .footer-a {

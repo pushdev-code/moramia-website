@@ -22,15 +22,19 @@
                     color: $line-bgcolor;
                     transition: all 500ms ease 0s;
                 }
+                &:focus {
+                    border : 1px solid $moramia-blue;
+                }
             }
 
             .product-name-link {
                 color: $product-bgcolor;
-
+                pointer-events: none;
                 &:hover {
                     color: $product-bgcolor;
                     transition: none;
                 }
+                
             }
 
             &::before {
