@@ -1,0 +1,53 @@
+.breadcrumb-navigation {
+    padding-left: 15px;
+    
+    ul {
+        display: flex;
+        font-size: 14px;
+        list-style: none;
+        margin-top: 150px;
+        padding: 12px;
+
+        li {
+
+            padding-left: .5rem;
+
+            a {
+                color: $nav-link-color;
+                font-family: $font-stack;
+                text-decoration: none;
+                text-transform: uppercase;
+
+                &:hover {
+                    color: $line-bgcolor;
+                    transition: all 500ms ease 0s;
+                }
+            }
+
+            .product-name-link {
+                color: $product-bgcolor;
+
+                &:hover {
+                    color: $product-bgcolor;
+                    transition: none;
+                }
+            }
+
+            &::before {
+                color: $product-bgcolor;
+                content: '>';
+                cursor: default;
+                padding-right: .4rem;
+            }
+
+            &:hover {
+                color: $line-bgcolor;
+                transition: all 500ms ease 0s;
+            }
+        }
+
+        .home-link::before {
+            content: none;
+        }
+    }
+}
