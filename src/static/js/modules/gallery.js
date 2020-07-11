@@ -34,9 +34,8 @@ function calculateMovement(size, counter) {
     return parseFloat(-size * counter);
 }
 
-if (document.querySelector('.gallery-wrapper')) {
-    imageGallery();
-}
+document.querySelector('.gallery-wrapper') && imageGallery();
+
 module.exports = {
     calculateMovement
 }
