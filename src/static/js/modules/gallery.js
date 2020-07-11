@@ -13,7 +13,6 @@ function imageGallery() {
             carouselSlide.forEach((cl) => {
                 cl.style.transform = "translateX(" + calculateMovement(size, counter) + "px)";
             });
-
         });
     };
 
@@ -30,10 +29,10 @@ function imageGallery() {
 }
 
 function calculateMovement(size, counter) {
-    return  parseFloat(-size * counter);
+    return parseFloat(-size * counter);
 }
 
-imageGallery();
+document.querySelector('.gallery-wrapper') && imageGallery();
 
 module.exports = {
     calculateMovement
