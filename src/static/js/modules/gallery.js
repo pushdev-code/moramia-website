@@ -2,7 +2,7 @@ function imageGallery() {
     const ACTIVE_CLASS = "active";
     const carouselSlide = document.querySelectorAll(".item-slide");
     const previews = document.querySelectorAll(".gallery-img");
-    const reset = document.querySelector(".gallery-wrapper-miniture img")
+    const reset = document.querySelector(".gallery-wrapper-miniture img");
 
     for (const preview of previews) {
         preview.addEventListener("click", function () {
@@ -13,7 +13,6 @@ function imageGallery() {
             carouselSlide.forEach((cl) => {
                 cl.style.transform = "translateX(" + calculateMovement(size, counter) + "px)";
             });
-
         });
     };
 
@@ -30,11 +29,12 @@ function imageGallery() {
 }
 
 function calculateMovement(size, counter) {
-    return  parseFloat(-size * counter);
+    return parseFloat(-size * counter);
 }
 
-imageGallery();
-
+if (document.querySelector('.gallery-wrapper')) {
+    imageGallery();
+}
 module.exports = {
     calculateMovement
 }
