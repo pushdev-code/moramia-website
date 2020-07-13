@@ -8,11 +8,11 @@
         margin-top: 150px;
         padding: 12px;
 
-        li {
+        .breadcrumb-link {
 
             padding-left: .5rem;
 
-            a {
+            .breadcrumb-ref {
                 color: $nav-link-color;
                 font-family: $font-stack;
                 text-decoration: none;
