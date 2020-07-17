@@ -1,25 +1,26 @@
+
 <section class="card-wrapper">
     <div class="card">
         <div class="product-head">
             <div class="line"></div>
-            <p class="product-price"> $<%= product.product_price %></p>
+            <p class="product-price">$<%= product.product_price %></p>
             <a href="#">
-                <h6 class="product-name"><%= product.product_name %></h6>
+                <h2 class="product-name"><%= product.product_name %></h2>
             </a>
-            <div class="ratings-review">
+            <ul class="ratings-review">
                 <div class="ratings">
                     <i class="faz fa-star"></i>
                     <i class="faz fa-star"></i>
-                    <i class="faz fa-star"></i>       
+                    <i class="faz fa-star"></i>
                     <i class="faz fa-star"></i>
                     <i class="faz fa-star"></i>
                 </div>
-                <a class="review" href="#">Write A Review</a>      
-            </div>
+                <a class="review" href="#">Write A Review</a>
+            </ul>
         </div>
         <p class="in-stock">
             <i class="fas fa-circle" class="circle"></i>
-         In stock
+            <i>In stock</i>
         </p>
     </div>
     <div class="description-wrapper">
@@ -29,16 +30,16 @@
         <div class="add-btn">
             <p class="qty">Qty</p>
             <div class="quantity">
-                <input type="number" class="qty-number" id="qty" step="1" min="1" max="300" name="quantity" value="1">
+                <input type="number" class="qty-number" id="qty" step="1" min="1" max="<%= product.product_in_stock %>" name="quantity" value="1">
                 <span class="qty-less">
                     <i class="far fa-caret-down"></i>
                 </span>
                 <span class="qty-more">
-                    <i class="far fa-caret-up"> 
+                    <i class="far fa-caret-up">
                     </i>
                 </span>
-            </div>    
+            </div>
         </div>
-        <button type="submit" name="addtocart" value="5" class="button">Add to cart</button>
+        <button type="addtocart" name="addtocart" value="5" class="product-card-btn">Add to cart</button>
     </form>
 </section>
