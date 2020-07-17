@@ -54,4 +54,4 @@ Once your PR is approved and merged, make sure your changes are available at htt
 ### Sources
 
 * [App Engine deploy with GitHub actions](https://baskus.wordpress.com/2019/09/29/how-to-deploy-to-app-engine-using-github-actions/).
-* [GCloud GitHub Actions](https://moramia-pushdev.uc.r.appspot.com/).
+* [GCloud GitHub Actions](https://github.com/GoogleCloudPlatform/github-actions).
