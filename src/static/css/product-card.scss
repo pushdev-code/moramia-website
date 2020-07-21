@@ -7,9 +7,7 @@
     }
 
     @media screen and (min-width: $breakpoint-desktop) {
-        margin-top: 2.6rem;
-        margin-left: 0;
-        margin-right: 1.5rem;
+        margin: 2.6rem 1.5rem 0 0;
         min-width: 40%;
         width: 100%;
     }
@@ -82,8 +80,7 @@
         background-color: $quantity-background;
         line-height: 40px;
         margin: 0;
-        padding-left: 15px;
-        padding-right: 15px;
+        padding: 0 15px;
     }
 
     .quantity {
