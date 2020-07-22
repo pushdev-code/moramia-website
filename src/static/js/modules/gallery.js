@@ -8,12 +8,12 @@ function imageGallery() {
     for (const preview of previews) {
         ["keypress", "click"].forEach(evt =>{
             preview.addEventListener(evt, function () {
-                let size = carouselSlide[0].clientWidth;
-                let counter = this.id;
+                const size = carouselSlide[0].clientWidth;
+                const counter = this.id;
                 previews.forEach((p) => p.classList.remove(ACTIVE_CLASS));
                 preview.classList.add(ACTIVE_CLASS);
-                carouselSlide.forEach((cl) => {
-                    cl.style.transform = "translateX(" + calculateMovement(size, counter) + "px)";
+                carouselSlide.forEach((img) => {
+                    img.style.transform = "translateX(" + calculateMovement(size, counter) + "px)";
                 });
             });
         });
@@ -25,8 +25,8 @@ function imageGallery() {
         let counter = reset.id;
         previews.forEach((p) => p.classList.remove(ACTIVE_CLASS));
         reset.classList.add(ACTIVE_CLASS);
-        carouselSlide.forEach((cl) => {
-            cl.style.transform = "translateX(" + calculateMovement(size, counter) + "px)";
+        carouselSlide.forEach((img) => {
+            img.style.transform = "translateX(" + calculateMovement(size, counter) + "px)";
         });
     });
 }

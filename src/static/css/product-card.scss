@@ -8,7 +8,6 @@
 
     @media screen and (min-width: $breakpoint-desktop) {
         margin: 2.6rem 1.5rem 0 0;
-        min-width: 40%;
         width: 100%;
     }
 
@@ -47,8 +46,8 @@
     }
 
     .review {
-        display: inline-block;
         color: $description-color;
+        display: inline-block;
         font-size: 14px;
     }
 
@@ -162,10 +161,6 @@
         }
 
         @media screen and (min-width: $breakpoint-tablet) {
-            align-self: start;
-        }
-
-        @media screen and (min-width: $breakpoint-desktop) {
             align-self: start;
         }
     }

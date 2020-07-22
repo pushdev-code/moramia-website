@@ -54,32 +54,31 @@
   }
 }
 
+.open,
 .close {
-  left: -320px;
+  display: block;
   height: fill-available;
   height: -webkit-fill-available;
-  display: block;
-  position: fixed;
   overflow-y: scroll;
+  position: fixed;
   transition-duration: 500ms;
 
   @media screen and (min-width : $breakpoint-tablet) {
-    left: 0;
     position: relative;
+    overflow-y: auto;
+  }
+}
+
+.close {
+  left: -320px;
+
+  @media screen and (min-width : $breakpoint-tablet) {
+    left: 0;
   }
 }
 
 .open {
   left: 0;
-  height: fill-available;
-  display: block;
-  position: fixed;
-  overflow-y: scroll;
-  transition-duration: 500ms;
-
-  @media screen and (min-width : $breakpoint-tablet) {
-    position: relative;
-  }
 }
 
 .mor-header-list {
@@ -91,7 +90,7 @@
     display: block;
     font-family: $font-stack;
     font-size: 14px;
-    line-height: 0.9;
+    line-height: .9;
     padding: 20px 0;
     position: relative;
     text-decoration: none;
@@ -135,11 +134,9 @@
 
     a {
       color: $nav-link-color;
-      display: inline-block;
-      font-weight: 400;
+      outline: 0 solid transparent;
       transition: all 500ms ease 0s;
       text-decoration: none;
-      outline: 0 solid transparent;
 
       &:hover {
         color: $line-bgcolor;
@@ -156,7 +153,6 @@
 .active {
   .link::after {
     left: $desktop-hidden-bar;
-    transition-duration: 0ms;
   }
 }
 
@@ -172,7 +168,11 @@
   /* WebKit-based browsers will ignore this. */
   width: -webkit-fill-available;
   /* Mozilla-based browsers will ignore this. */
-  z-index: 100;
+  z-index: 2;
+
+  @media screen and (min-width : $breakpoint-tablet) {
+    display: none;
+  }
 
   .logo-anchor {
     height: 100%;
@@ -194,9 +194,5 @@
 
   .burger-menu {
     cursor: pointer;
-  }
-
-  @media screen and (min-width : $breakpoint-tablet) {
-    display: none;
   }
 }
