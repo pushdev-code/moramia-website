@@ -9,7 +9,7 @@ function imageGallery() {
         ["keypress", "click"].forEach(evt =>{
             preview.addEventListener(evt, function () {
                 const size = carouselSlide[0].clientWidth;
-                const counter = this.id;
+                const counter = this.id.slice(-1);
                 previews.forEach((p) => p.classList.remove(ACTIVE_CLASS));
                 preview.classList.add(ACTIVE_CLASS);
                 carouselSlide.forEach((img) => {
