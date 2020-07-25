@@ -4,6 +4,10 @@ function imageGallery() {
     const carouselSlide = document.querySelectorAll(".item-slide");
     const previews = document.querySelectorAll(".gallery-img");
     const reset = document.querySelector(".gallery-wrapper-miniture img");
+    const defaultActive = document.querySelector(".gallery-img");
+
+    //Adds active to the first img
+    defaultActive.classList.add(ACTIVE_CLASS);
 
     for (const preview of previews) {
         ["keypress", "click"].forEach(evt =>{
@@ -34,7 +38,6 @@ function imageGallery() {
 function calculateMovement(size, counter) {
     return parseFloat(-size * counter);
 }
-
 document.querySelector('.gallery-wrapper') && imageGallery();
 
 module.exports = {
