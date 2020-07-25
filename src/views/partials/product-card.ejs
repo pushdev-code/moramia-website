@@ -1,0 +1,44 @@
+
+<section class="card-wrapper">
+    <div class="card">
+        <div class="product-head">
+            <div class="line"></div>
+            <p class="product-price">$<%= product.product_price %></p>
+            <a href="#">
+                <h2 class="product-name"><%= product.product_name %></h2>
+            </a>
+            <ul class="ratings-review">
+                <div class="ratings">
+                    <i class="faz fa-star"></i>
+                    <i class="faz fa-star"></i>
+                    <i class="faz fa-star"></i>
+                    <i class="faz fa-star"></i>
+                    <i class="faz fa-star"></i>
+                </div>
+                <a class="review" href="#">Write A Review</a>
+            </ul>
+        </div>
+        <p class="in-stock">
+            <i class="fas fa-circle" class="circle"></i>
+            <i>In stock</i>
+        </p>
+    </div>
+    <div class="description-wrapper">
+        <p class="description"><%= product.product_description %></p>
+    </div>
+    <form class="add-cart">
+        <div class="add-btn">
+            <label for="qty" class="qty">Qty</label>
+            <div class="quantity">
+                <input type="number" class="qty-number" id="qty" step="1" min="1" max="<%= product.product_in_stock %>" name="quantity" value="1">
+                <span class="qty-less">
+                    <i class="far fa-caret-down"></i>
+                </span>
+                <span class="qty-more">
+                    <i class="far fa-caret-up"></i>
+                </span>
+            </div>
+        </div>
+        <button name="addtocart" value="5" class="product-card-btn">Add to cart</button>
+    </form>
+</section>

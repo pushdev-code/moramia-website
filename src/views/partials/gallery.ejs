@@ -1,22 +1,14 @@
 <section class="gallery-wrapper">
     <ul class="slider">
-        <li class="item-slide">
-            <img class="gallery-highlight" src=<%= product.product_image %> alt="main image">
-        </li>
-        <li class="item-slide">
-            <img class="gallery-highlight" src=<%= product.product_gallery.image2 %> alt="main image">
-        </li>
-        <li class="item-slide">
-            <img class="gallery-highlight" src=<%= product.product_gallery.image3 %> alt="main image">
-        </li>
-        <li class="item-slide">
-            <img class="gallery-highlight" src=<%= product.product_gallery.image4 %> alt="main image">
-        </li>
+        <% for (let index = 1; index <= 4; index++) { %> 
+            <li class="item-slide">
+                <img class="gallery-highlight" src=<%= product.product_gallery ['image' + index] %> alt="main image">
+            </li>
+        <% } %>
     </ul>
     <div class="gallery-wrapper-miniture">
-        <img id="0" class="gallery-img active" src=<%= product.product_gallery.image1 %> alt="product image 1" />
-        <img id="1" class="gallery-img" src=<%= product.product_gallery.image2 %> alt="product image 3" />
-        <img id="2" class="gallery-img" src=<%= product.product_gallery.image3 %> alt="product image 2" />
-        <img id="3" class="gallery-img" src=<%= product.product_gallery.image4 %> alt="product image 4" />
+        <% for (let index = 1; index <= 4; index++) { %> 
+            <img id=<%='gallery-img-' + [index - 1] %> tabindex="0" class="gallery-img" src=<%= product.product_gallery['image' + index] %> alt="product image <%= index %>" />
+        <% } %>
     </div>
 </section>

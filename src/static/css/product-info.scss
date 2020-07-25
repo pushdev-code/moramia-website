@@ -1,0 +1,9 @@
+.product-information {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2rem;
+    
+    @media screen and (min-width: $breakpoint-desktop){
+        flex-direction: row;
+    }
+}

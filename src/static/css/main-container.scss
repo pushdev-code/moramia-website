@@ -1,0 +1,9 @@
+.main-container {
+    display: flex;
+    margin: 0;
+    padding: 0;
+
+    .main-container-left {
+        max-width: 100%;
+    }
+}

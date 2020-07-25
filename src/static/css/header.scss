@@ -1,197 +1,198 @@
 .mor-links-container {
-    background-color: $header-background;
-    box-sizing: border-box;
-    padding: 60px 75px;
+  background-color: $header-background;
+  bottom: 0;
+  box-sizing: border-box;
+  max-width: 320px;
+  padding: 60px 75px;
+  position: fixed;
+  transition-duration: 500ms;
+  top: 0;
+  width: 320px;
+  z-index: 100;
+
+  .button-close {
+    background-color: $line-bgcolor;
+    color: $header-background;
+    cursor: pointer;
+    font-size: 12px;
+    height: 40px;
+    line-height: 40px;
+    position: absolute;
+    right: 15px;
+    text-align: center;
+    top: 5px;
+    transition-duration: 500ms;
+    width: 40px;
+
+    &:hover {
+      background-color: $nav-link-color;
+      transition: all 500ms ease 0s;
+    }
+
+    @media screen and (min-width : $breakpoint-tablet) {
+      display: none;
+    }
+  }
+
+  @media screen and (min-width : $breakpoint-tablet) {
     position: relative;
     transition-duration: 500ms;
-    top: 0;
-    width: 320px;
-  
-    img {
-      height: auto;
+  }
+
+  img {
+    height: auto;
+    margin-bottom: 100px;
+    max-width: 100%;
+  }
+
+  nav {
+    ul {
+      margin: 0;
       margin-bottom: 100px;
-      max-width: 100%;
-    }
-  
-    nav {
-      ul {
-        margin:0;
-        margin-bottom: 100px;
-        padding-inline-start: 0;
-      }
-    }
-  
-    @media only screen and (max-width: #{$breakpoint-desktop - 1}) and (min-width: $breakpoint-tablet){
-      width: 280px;
-      padding: 50px 50px;
-      left: 0;
-      transition-duration: 500ms;
-    }
-  
-    @media screen and (max-width: #{$breakpoint-tablet - 1}) and (min-width: $breakpoint-mobile){
-  
-      bottom: 0;
-      max-width: 320px;
-      position: fixed;
-      z-index: 100;
-  
-      .button-close {
-        background-color: $line-bgcolor;
-        color: $header-background;
-        cursor: pointer;
-        font-size: 12px;
-        height: 40px;
-        line-height: 40px;
-        position: absolute;
-        right: 15px;
-        text-align: center;
-        top: 0;
-        transition-duration: 500ms;
-        width: 40px;
-    
-        &:hover {
-          background-color: $nav-link-color;
-          transition: all 500ms ease 0s;
-        }
-      }
+      padding-inline-start: 0;
     }
   }
-  
-  .close {
-    @media screen and (max-width: #{$breakpoint-tablet - 1}) and (min-width: $breakpoint-mobile){
-      left: -320px;
-      height: fill-available;
-      height: -webkit-fill-available;
-      display: block;
-      position: fixed;
-      overflow-y: scroll;
+}
+
+.open,
+.close {
+  display: block;
+  height: fill-available;
+  height: -webkit-fill-available;
+  overflow-y: scroll;
+  position: fixed;
+  transition-duration: 500ms;
+
+  @media screen and (min-width : $breakpoint-tablet) {
+    position: relative;
+    overflow-y: auto;
+  }
+}
+
+.close {
+  left: -320px;
+
+  @media screen and (min-width : $breakpoint-tablet) {
+    left: 0;
+  }
+}
+
+.open {
+  left: 0;
+}
+
+.mor-header-list {
+  color: $content-bgcolor;
+  list-style: none;
+
+  .link {
+    color: $nav-link-color;
+    display: block;
+    font-family: $font-stack;
+    font-size: 14px;
+    line-height: .9;
+    padding: 20px 0;
+    position: relative;
+    text-decoration: none;
+    text-transform: uppercase;
+
+    &::after {
+      background-color: $line-bgcolor;
+      content: '';
+      height: 3px;
+      left: -150px;
+      margin-top: -1.5px;
+      position: absolute;
+      top: 50%;
       transition-duration: 500ms;
+      width: 30px;
+    }
+
+    &:hover {
+      color: $line-bgcolor;
+      transition: all 500ms ease 0s;
+    }
+
+    &:focus {
+      border: solid 1px $moramia-blue;
+    }
+
+    &:hover::after {
+      left: $desktop-hidden-bar;
     }
   }
-  
-  .open {
-    @media screen and (max-width: #{$breakpoint-tablet - 1}) and (min-width: $breakpoint-mobile){
-      left: 0;
-      height: fill-available;
-      display: block;
-      position: fixed;
-      overflow-y: scroll;
-      transition-duration: 500ms;
-    }
-  }
-  
-  .mor-header-list {
-    color: $content-bgcolor;
+}
+
+.social {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 75px;
+
+  li {
+
     list-style: none;
-  
-    .link {
+
+    a {
       color: $nav-link-color;
-      display: block;
-      font-family: $font-stack;
-      font-size: 14px;
-      line-height: 0.9;
-      padding: 20px 0;
-      position: relative;
+      outline: 0 solid transparent;
+      transition: all 500ms ease 0s;
       text-decoration: none;
-      text-transform: uppercase;
-  
-      &::after {
-        background-color: $line-bgcolor;
-        content: '';
-        height: 3px;
-        left: -150px;
-        margin-top: -1.5px;
-        position: absolute;
-        top: 50%;
-        transition-duration: 500ms;
-        width: 30px;
-      }
-  
+
       &:hover {
         color: $line-bgcolor;
         transition: all 500ms ease 0s;
       }
-  
-      &:hover::after {
-        left: $desktop-hidden-bar;
-    
-        @media only screen and (max-width: #{$breakpoint-desktop - 1}) and (min-width: $breakpoint-tablet) {
-          left: $tablet-hidden-bar;
-        }
+
+      &:focus {
+        border: 1px solid $moramia-blue;
       }
     }
   }
+}
 
-  .social {
-    justify-content: space-between;
-    display: flex;
-    margin-bottom: 75px;
-
-    li {
-
-      list-style: none;
-      a {
-        color: $nav-link-color;
-        display: inline-block;
-        font-weight: 400;
-        transition: all 500ms ease 0s;
-        text-decoration: none;
-        outline: 0 solid transparent;
-      
-        &:hover {
-          color: $line-bgcolor;
-          transition: all 500ms ease 0s;
-        }
-      }
-    } 
+.active {
+  .link::after {
+    left: $desktop-hidden-bar;
   }
-  
-  .active {
-    .link::after {
-      left: $desktop-hidden-bar;
-      transition-duration: 0ms;
-  
-      @media only screen and (max-width: #{$breakpoint-desktop - 1}) and (min-width: $breakpoint-tablet){
-        left: $tablet-hidden-bar;
-      }
-    }
-  }
-  
-  .mor-menu-container {
+}
+
+.mor-menu-container {
+  align-items: center;
+  background-color: $header-background;
+  display: flex;
+  height: 70px;
+  justify-content: space-between;
+  padding: 1em 2em;
+  position: fixed;
+  width: -moz-available;
+  /* WebKit-based browsers will ignore this. */
+  width: -webkit-fill-available;
+  /* Mozilla-based browsers will ignore this. */
+  z-index: 2;
+
+  @media screen and (min-width : $breakpoint-tablet) {
     display: none;
-  
-    @media screen and (max-width: #{$breakpoint-tablet - 1}) and (min-width: $breakpoint-mobile){
-      align-items: center;
-      background-color: $header-background;
-      display: flex;
-      height: 70px;
-      justify-content: space-between;
-      padding: 0 2em;
-      position: fixed;
-      width: -moz-available;          /* WebKit-based browsers will ignore this. */
-      width: -webkit-fill-available;  /* Mozilla-based browsers will ignore this. */
-      z-index: 100;
-      
-      .logo-anchor {
-        height: 100%;
-      }
-
-      img {
-        height: 100%;
-        width: auto;
-      }
-  
-      .line-burger-menu {
-        background-color: $line-bgcolor;
-        border-radius: 2px;
-        display: flex;
-        height: 3px;
-        margin-bottom: 5px;
-        width: 28px;
-      }
-  
-      .burger-menu {
-        cursor: pointer;
-      }
-    }
   }
+
+  .logo-anchor {
+    height: 100%;
+  }
+
+  img {
+    height: 100%;
+    width: auto;
+  }
+
+  .line-burger-menu {
+    background-color: $line-bgcolor;
+    border-radius: 2px;
+    display: flex;
+    height: 3px;
+    margin-bottom: 5px;
+    width: 28px;
+  }
+
+  .burger-menu {
+    cursor: pointer;
+  }
+}
